@@ -1,0 +1,8 @@
+pandas
+numpy
+openpyxl
+scikit-learn
+rapidfuzz
+pytest
+matplotlib
+seaborn

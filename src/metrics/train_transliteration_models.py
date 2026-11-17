@@ -10,11 +10,11 @@ Uses:
 - Out-of-fold class probabilities for Cleanlab
 
 Input:
-    data/processed/transliteration_grouped_dataset.csv
+    data/processed/transliteration_grouped_dataset_reviewed.csv
 
 Outputs:
-    data/processed/transliteration_model_comparison.csv
-    data/processed/transliteration_oof_predictions.csv
+    data/processed/transliteration_model_comparison_reviewed.csv
+    data/processed/transliteration_oof_predictions_reviewed.csv
 """
 
 from pathlib import Path
@@ -50,7 +50,7 @@ INPUT_FILE = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "transliteration_grouped_dataset.csv"
+    / "transliteration_grouped_dataset_reviewed.csv"
 )
 
 OUTPUT_DIR = PROJECT_ROOT / "data" / "processed"
@@ -462,7 +462,7 @@ def save_results(comparison_results, all_predictions):
     )
 
     comparison_path = (
-        OUTPUT_DIR / "transliteration_model_comparison.csv"
+        OUTPUT_DIR / "transliteration_model_comparison_reviewed.csv"
     )
 
     comparison_df.to_csv(
@@ -476,7 +476,7 @@ def save_results(comparison_results, all_predictions):
     )
 
     predictions_path = (
-        OUTPUT_DIR / "transliteration_oof_predictions.csv"
+        OUTPUT_DIR / "transliteration_oof_predictions_reviewed.csv"
     )
 
     predictions_df.to_csv(

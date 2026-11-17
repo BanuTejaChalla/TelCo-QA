@@ -26,14 +26,14 @@ INPUT_FILE = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "transliteration_oof_predictions.csv"
+    / "transliteration_oof_predictions_reviewed.csv"
 )
 
 OUTPUT_FILE = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "transliteration_label_issue_report.csv"
+    / "transliteration_label_issue_report_reviewed.csv"
 )
 
 SELECTED_MODEL = "Logistic Regression"
@@ -83,41 +83,82 @@ def load_predictions():
         df["model"] == SELECTED_MODEL
     ].copy().reset_index(drop=True)
 
-    if len(df) != 70:
+    if df.empty:
         raise ValueError(
-            f"Expected 70 predictions, found {len(df)}."
+            f"No predictions found for {SELECTED_MODEL}."
+        )
+
+    if len(df) < 2:
+        raise ValueError(
+            "At least two prediction records are required."
         )
 
     if df["label"].isna().any():
         raise ValueError("Missing labels detected.")
 
+    df["label"] = pd.to_numeric(
+        df["label"],
+        errors="raise"
+    ).astype(int)
+
     if not set(df["label"].unique()).issubset({0, 1}):
-        raise ValueError("Labels must be binary: 0 or 1.")
+        raise ValueError(
+            "Labels must be binary: 0 or 1."
+        )
+
+    if df["label"].nunique() != 2:
+        raise ValueError(
+            "Both positive and negative labels must be present."
+        )
 
     probability_columns = [
         "probability_different",
         "probability_same",
     ]
 
+    for column in probability_columns:
+        df[column] = pd.to_numeric(
+            df[column],
+            errors="raise"
+        )
+
     if df[probability_columns].isna().any().any():
-        raise ValueError("Missing probabilities detected.")
+        raise ValueError(
+            "Missing probabilities detected."
+        )
 
     probabilities = df[
         probability_columns
     ].to_numpy(dtype=float)
 
     if not np.isfinite(probabilities).all():
-        raise ValueError("Non-finite probabilities detected.")
+        raise ValueError(
+            "Non-finite probabilities detected."
+        )
 
     if (probabilities < 0).any() or (probabilities > 1).any():
-        raise ValueError("Probabilities must be between 0 and 1.")
+        raise ValueError(
+            "Probabilities must be between 0 and 1."
+        )
 
     if not np.allclose(
         probabilities.sum(axis=1),
         1.0,
         atol=1e-6,
     ):
-        raise ValueError("Probability sums are invalid.")
+        raise ValueError(
+            "Probability sums are invalid."
+        )
+
+    if df["group_id"].isna().any():
+        raise ValueError(
+            "Missing group IDs detected."
+        )
+
+    if df[["word_1", "word_2"]].isna().any().any():
+        raise ValueError(
+            "Missing word values detected."
+        )
 
     print("\nINPUT VALIDATION")
     print("-" * 45)
@@ -137,7 +178,6 @@ def detect_issues(df, probabilities):
 
     labels = df["label"].to_numpy(dtype=int)
 
-    # Get row indices ranked by Cleanlab.
     ranked_indices = find_label_issues(
         labels=labels,
         pred_probs=probabilities,
@@ -149,7 +189,6 @@ def detect_issues(df, probabilities):
         dtype=int,
     )
 
-    # Validate returned indices.
     if (
         ranked_indices.ndim != 1
         or np.any(ranked_indices < 0)
@@ -160,7 +199,6 @@ def detect_issues(df, probabilities):
             "Cleanlab returned invalid ranked indices."
         )
 
-    # Build a full-length Boolean mask.
     issue_mask = np.zeros(
         len(df),
         dtype=bool,
@@ -168,13 +206,11 @@ def detect_issues(df, probabilities):
 
     issue_mask[ranked_indices] = True
 
-    # Original-label probabilities.
     assigned_label_probability = probabilities[
         np.arange(len(labels)),
         labels,
     ]
 
-    # Model predictions.
     suggested_labels = probabilities.argmax(axis=1)
 
     report = df.copy()
@@ -195,7 +231,6 @@ def detect_issues(df, probabilities):
 
     report["cleanlab_flagged"] = issue_mask
 
-    # Rank all flagged rows in Cleanlab's returned order.
     rank_lookup = {
         int(index): rank
         for rank, index in enumerate(

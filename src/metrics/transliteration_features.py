@@ -10,18 +10,20 @@ from rapidfuzz.fuzz import ratio
 # Project paths
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
+# Use manually reviewed annotations
 INPUT_FILE = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "transliteration_ml_training_data.csv"
+    / "transliteration_ml_training_data_reviewed.csv"
 )
 
+# Save reviewed features separately
 OUTPUT_FILE = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "transliteration_feature_dataset.csv"
+    / "transliteration_feature_dataset_reviewed.csv"
 )
 
 VOWELS = set("aeiou")
@@ -151,7 +153,7 @@ def extract_pair_features(word_1, word_2):
 def main():
     if not INPUT_FILE.exists():
         raise FileNotFoundError(
-            f"Training data not found: {INPUT_FILE}"
+            f"Reviewed training data not found: {INPUT_FILE}"
         )
 
     df = pd.read_csv(INPUT_FILE)
@@ -177,7 +179,7 @@ def main():
 
     features_df = pd.DataFrame(feature_rows)
 
-    # Preserve the original annotations and metadata.
+    # Preserve the reviewed annotations and metadata.
     result_df = pd.concat(
         [df.reset_index(drop=True), features_df],
         axis=1
@@ -193,13 +195,16 @@ def main():
         index=False
     )
 
-    print("\nTRANSLITERATION FEATURE EXTRACTION")
-    print("----------------------------------")
+    print("\nREVIEWED TRANSLITERATION FEATURE EXTRACTION")
+    print("-------------------------------------------")
 
-    print(f"Input records       : {len(df)}")
-    print(f"Output records      : {len(result_df)}")
-    print(f"Features extracted  : {len(features_df.columns)}")
+    print(f"Input records         : {len(df)}")
+    print(f"Output records        : {len(result_df)}")
+    print(f"Features extracted    : {len(features_df.columns)}")
     print(f"Missing feature values: {features_df.isna().sum().sum()}")
+
+    print("\nReviewed label distribution:")
+    print(result_df["label"].value_counts().sort_index().to_string())
 
     print(f"\nOutput saved to:\n{OUTPUT_FILE}")
 

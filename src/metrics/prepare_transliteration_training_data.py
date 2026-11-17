@@ -5,74 +5,43 @@ import pandas as pd
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-
 DATA_DIR = PROJECT_ROOT / "data" / "processed"
 
 BATCH_FILES = [
-    DATA_DIR / "transliteration_annotation_batch_01.csv",
-    DATA_DIR / "transliteration_annotation_batch_02.csv",
-    DATA_DIR / "transliteration_annotation_batch_03.csv",
-    DATA_DIR / "transliteration_annotation_batch_04.csv",
+    DATA_DIR / f"transliteration_annotation_batch_{i:02d}.csv"
+    for i in range(1, 8)
 ]
 
-ALL_ANNOTATIONS_PATH = (
-    DATA_DIR / "transliteration_annotations_all.csv"
-)
-
-TRAINING_DATA_PATH = (
-    DATA_DIR / "transliteration_ml_training_data.csv"
-)
-
-ENGLISH_CONTROLS_PATH = (
-    DATA_DIR / "transliteration_english_controls.csv"
-)
-
-REVIEW_DATA_PATH = (
-    DATA_DIR / "transliteration_review_pairs.csv"
-)
+ALL_ANNOTATIONS_PATH = DATA_DIR / "transliteration_annotations_all.csv"
+TRAINING_DATA_PATH = DATA_DIR / "transliteration_ml_training_data.csv"
+ENGLISH_CONTROLS_PATH = DATA_DIR / "transliteration_english_controls.csv"
+REVIEW_DATA_PATH = DATA_DIR / "transliteration_review_pairs.csv"
 
 
 def normalize_pair(word_1, word_2):
-    """Create an order-independent pair identifier."""
-
-    return tuple(
-        sorted([
-            str(word_1).strip().lower(),
-            str(word_2).strip().lower()
-        ])
-    )
+    return tuple(sorted([
+        str(word_1).strip().lower(),
+        str(word_2).strip().lower()
+    ]))
 
 
 def normalize_annotation(value):
-    """Standardize annotation labels."""
-
     value = str(value).strip().upper()
 
     if value in ["1", "1.0"]:
         return "1"
-
     if value in ["0", "0.0"]:
         return "0"
+    if value in ["ENGLISH", "REVIEW"]:
+        return value
 
-    if value == "ENGLISH":
-        return "ENGLISH"
-
-    if value == "REVIEW":
-        return "REVIEW"
-
-    raise ValueError(
-        f"Unrecognized annotation label: {value!r}"
-    )
+    raise ValueError(f"Unrecognized annotation label: {value!r}")
 
 
 def load_annotation_batches():
-
     all_batches = []
 
-    for batch_number, batch_path in enumerate(
-        BATCH_FILES, start=1
-    ):
-
+    for batch_number, batch_path in enumerate(BATCH_FILES, start=1):
         print(f"\nLoading Batch {batch_number}...")
 
         if not batch_path.exists():
@@ -86,28 +55,21 @@ def load_annotation_batches():
             keep_default_na=False
         )
 
-        required_columns = [
-            "word_1",
-            "word_2",
-            "annotation"
-        ]
+        required_columns = ["word_1", "word_2", "annotation"]
 
-        missing_columns = [
-            column
-            for column in required_columns
+        missing = [
+            column for column in required_columns
             if column not in batch.columns
         ]
 
-        if missing_columns:
+        if missing:
             raise ValueError(
-                f"Batch {batch_number} is missing columns: "
-                f"{missing_columns}"
+                f"Batch {batch_number} is missing columns: {missing}"
             )
 
         if batch["annotation"].str.strip().eq("").any():
             raise ValueError(
-                f"Batch {batch_number} contains blank annotations. "
-                "Complete them before consolidation."
+                f"Batch {batch_number} contains blank annotations."
             )
 
         batch["annotation"] = batch["annotation"].apply(
@@ -120,53 +82,35 @@ def load_annotation_batches():
 
         print(f"    Records loaded: {len(batch)}")
 
-    return pd.concat(
-        all_batches,
-        ignore_index=True
-    )
+    return pd.concat(all_batches, ignore_index=True, sort=False)
 
 
 def validate_annotations(df):
-
     print("\nValidating annotations...")
 
-    # Check for missing words
     missing_words = (
         df["word_1"].str.strip().eq("")
         | df["word_2"].str.strip().eq("")
     )
 
     if missing_words.any():
-        raise ValueError(
-            "Some annotation records contain empty words."
-        )
+        raise ValueError("Some annotation records contain empty words.")
 
-    # Identify order-independent duplicate pairs
     df["pair_id"] = df.apply(
-        lambda row: normalize_pair(
-            row["word_1"],
-            row["word_2"]
-        ),
+        lambda row: normalize_pair(row["word_1"], row["word_2"]),
         axis=1
     )
 
     duplicate_mask = df["pair_id"].duplicated(keep=False)
 
     if duplicate_mask.any():
-
         duplicates = df.loc[
             duplicate_mask,
-            [
-                "word_1",
-                "word_2",
-                "annotation",
-                "source_batch"
-            ]
+            ["word_1", "word_2", "annotation", "source_batch"]
         ]
 
         raise ValueError(
             "Duplicate pairs found across annotation batches.\n"
-            "Inspect these records before continuing:\n"
             + duplicates.to_string(index=False)
         )
 
@@ -177,24 +121,19 @@ def validate_annotations(df):
 
 
 def save_outputs(df):
-
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    # All annotations, including English controls
     df.to_csv(
         ALL_ANNOTATIONS_PATH,
         index=False,
         encoding="utf-8-sig"
     )
 
-    # Primary ML dataset: Telugu positive and negative pairs
     training_data = df[
         df["annotation"].isin(["1", "0"])
     ].copy()
 
-    training_data["label"] = (
-        training_data["annotation"].astype(int)
-    )
+    training_data["label"] = training_data["annotation"].astype(int)
 
     training_data = training_data.drop(
         columns=["annotation", "pair_id"],
@@ -207,7 +146,6 @@ def save_outputs(df):
         encoding="utf-8-sig"
     )
 
-    # English controls kept separately
     english_controls = df[
         df["annotation"] == "ENGLISH"
     ].copy()
@@ -218,7 +156,6 @@ def save_outputs(df):
         encoding="utf-8-sig"
     )
 
-    # Ambiguous pairs kept separately
     review_pairs = df[
         df["annotation"] == "REVIEW"
     ].copy()
@@ -233,20 +170,16 @@ def save_outputs(df):
 
 
 def main():
-
     print("\n" + "=" * 65)
     print("       TELCO-QA | ANNOTATION CONSOLIDATION")
     print("=" * 65)
 
-    # Step 1: Load all four batches
     annotations = load_annotation_batches()
 
     print("\nTotal annotation records:", len(annotations))
 
-    # Step 2: Validate
     annotations = validate_annotations(annotations)
 
-    # Step 3: Calculate annotation distribution
     counts = annotations["annotation"].value_counts()
 
     positive = counts.get("1", 0)
@@ -254,12 +187,8 @@ def main():
     english = counts.get("ENGLISH", 0)
     review = counts.get("REVIEW", 0)
 
-    # Step 4: Save consolidated datasets
-    training, controls, review_data = save_outputs(
-        annotations
-    )
+    training, controls, review_data = save_outputs(annotations)
 
-    # Step 5: Display summary
     print("\n" + "-" * 65)
     print("                 ANNOTATION SUMMARY")
     print("-" * 65)
@@ -277,7 +206,6 @@ def main():
     print(f"    Negative labels   : {(training['label'] == 0).sum()}")
 
     print("\nGenerated files:")
-
     print(f"1. {ALL_ANNOTATIONS_PATH}")
     print(f"2. {TRAINING_DATA_PATH}")
     print(f"3. {ENGLISH_CONTROLS_PATH}")

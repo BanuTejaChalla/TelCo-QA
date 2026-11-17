@@ -11,7 +11,7 @@ INPUT_FILE = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "transliteration_grouped_dataset.csv"
+    / "transliteration_grouped_dataset_reviewed.csv"
 )
 
 

@@ -1,0 +1,12 @@
+
+word_1,word_2,frequency_1,frequency_2,similarity,candidate_reason,context_1,context_2,annotation,review_notes,source_batch,candidate_type,pair_id
+cheyyalee,cheyyali,133,418,0.8235,general_similarity,,,1,Same word - spelling variation,Batch 05,general_similarity,
+choodali,chudali,21,54,0.8000,general_similarity,,,1,Same word - spelling variation,Batch 05,general_similarity,
+avuthundhi,avuthondi,36,56,0.8421,general_similarity,,,1,Same word - spelling variation,Batch 05,general_similarity,
+avuthondi,avutundi,56,34,0.8235,general_similarity,,,1,Same word - spelling variation,Batch 05,general_similarity,
+avuthundhi,avuthundo,36,101,0.8421,general_similarity,,,0,Different form,Batch 05,general_similarity,
+cheyyaledu,cheyyalee,12,133,0.8421,general_similarity,,,1,Same word - spelling variation,Batch 05,general_similarity,
+anipinchina,anipinchindhi,28,407,0.8333,general_similarity,,,0,Different word,Batch 05,general_similarity,
+valla,valle,233,57,0.8000,general_similarity,,,0,Different form,Batch 05,general_similarity,
+chesindi,ichindi,229,62,0.8000,general_similarity,,,0,Different word,Batch 05,general_similarity,
+anipistondi,kanipisthundi,7,33,0.8333,general_similarity,,,0,Different word,Batch 05,general_similarity,

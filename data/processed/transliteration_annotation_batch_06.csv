@@ -1,0 +1,11 @@
+word_1,word_2,frequency_1,frequency_2,similarity,candidate_reason,context_1,context_2,annotation,review_notes,source_batch,candidate_type,pair_id
+chepparu,chesaru,61,734,0.8000,general_similarity,,,0,Different word,Batch 06,general_similarity,
+chesaaru,chestharu,256,226,0.8235,general_similarity,,,0,Different form,Batch 06,general_similarity,
+antha,anthe,23,462,0.8000,general_similarity,,,0,Different form,Batch 06,general_similarity,
+avvali,ivvali,462,51,0.8333,general_similarity,,,0,Different word,Batch 06,general_similarity,
+chesaaru,chesadu,256,32,0.8000,general_similarity,,,0,Different form,Batch 06,general_similarity,
+vachayi,vasthayi,68,28,0.8000,general_similarity,,,0,Different form,Batch 06,general_similarity,
+manchhi,manchide,49,27,0.8000,general_similarity,,,0,Different form,Batch 06,general_similarity,
+anipisthundhi,anipistondi,8,7,0.8333,general_similarity,,,1,Same word - spelling variation,Batch 06,general_similarity,
+vachina,vachindi,40,76,0.8000,general_similarity,,,0,Different form,Batch 06,general_similarity,
+avuthundo,avutundi,486,34,0.8235,general_similarity,,,0,Different form,Batch 06,general_similarity,

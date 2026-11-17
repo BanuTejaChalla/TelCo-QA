@@ -11,21 +11,21 @@ INPUT_FILE = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "transliteration_feature_dataset.csv"
+    / "transliteration_feature_dataset_reviewed.csv"
 )
 
 OUTPUT_DATASET = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "transliteration_grouped_dataset.csv"
+    / "transliteration_grouped_dataset_reviewed.csv"
 )
 
 OUTPUT_SUMMARY = (
     PROJECT_ROOT
     / "data"
     / "processed"
-    / "transliteration_group_summary.csv"
+    / "transliteration_group_summary_reviewed.csv"
 )
 
 

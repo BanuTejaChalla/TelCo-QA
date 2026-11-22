@@ -1,5 +1,5 @@
 """
-Metric 05: Unsupervised Semantic Domain Discovery
+Metric 05: Unsupervised Semantic Domain Discovery — FROZEN V2.1
 
 Purpose:
     Describe the subject-matter structure of a text dataset without
@@ -21,15 +21,19 @@ Important:
 """
 
 import argparse
+import hashlib
 import json
 import math
+import platform
 import re
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import sklearn
+import sentence_transformers
 from sentence_transformers import SentenceTransformer
 import hdbscan
 from sklearn.feature_extraction.text import CountVectorizer, ENGLISH_STOP_WORDS
@@ -66,6 +70,40 @@ TOP_TERMS_PER_CLUSTER = 8
 REPRESENTATIVE_RECORDS = 3
 SILHOUETTE_SAMPLE_SIZE = 2000
 RANDOM_STATE = 42
+
+
+# Frozen identity and reproducibility helpers.
+FROZEN_VERSION = "V2.1-FROZEN"
+FROZEN_METHOD_ID = "telcoqa.metric05.semantic-domain-discovery.v2.1"
+
+
+def sha256_file(path, chunk_size=1024 * 1024):
+    digest = hashlib.sha256()
+    with open(path, "rb") as source:
+        for chunk in iter(lambda: source.read(chunk_size), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def environment_metadata():
+    from importlib.metadata import PackageNotFoundError, version
+
+    def package_version(package_name):
+        try:
+            return version(package_name)
+        except PackageNotFoundError:
+            return "not-installed"
+
+    return {
+        "python_version": platform.python_version(),
+        "platform": platform.platform(),
+        "numpy_version": np.__version__,
+        "pandas_version": pd.__version__,
+        "scikit_learn_version": sklearn.__version__,
+        "sentence_transformers_version": package_version("sentence-transformers"),
+        "umap_learn_version": package_version("umap-learn"),
+        "hdbscan_version": package_version("hdbscan"),
+    }
 
 # HDBSCAN parameters are derived from dataset size unless overridden.
 MIN_CLUSTER_SIZE_FLOOR = 10
@@ -208,6 +246,11 @@ def reduce_embeddings(embeddings):
             metric="cosine",
             random_state=RANDOM_STATE,
             transform_seed=RANDOM_STATE,
+            n_jobs=1,
+            # V2.1 used UMAP's legacy layout pipeline. Make that choice
+            # explicit so a future UMAP default change does not silently
+            # alter the frozen clustering results.
+            compatibility_layout=True,
         )
         reduced = reducer.fit_transform(embeddings)
         return np.asarray(reduced, dtype=np.float32)
@@ -447,6 +490,7 @@ def build_summary(
     labels,
     cluster_details,
     embeddings,
+    dataset_path,
 ):
     distribution = calculate_distribution_metrics(labels)
     cohesion_values = [
@@ -459,13 +503,39 @@ def build_summary(
 
     summary = {
         "metric": "Metric 05 - Unsupervised Semantic Domain Discovery",
-        "version": "V2.1",
-        "generated_at": datetime.now().isoformat(),
+        "version": FROZEN_VERSION,
+        "method_id": FROZEN_METHOD_ID,
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "reproducibility": {
+            "dataset_sha256": sha256_file(dataset_path),
+            "environment": environment_metadata(),
+            "random_state": RANDOM_STATE,
+            "embedding_batch_size": BATCH_SIZE,
+            "silhouette_sample_size": SILHOUETTE_SAMPLE_SIZE,
+            "hdbscan_parameters": {
+                "min_cluster_size_rule": "clip(round(sqrt(n_records) * 0.5), 10, 50)",
+                "min_samples_rule": "max(2, round(min_cluster_size * 0.25))",
+                "metric": "euclidean",
+                "cluster_selection_method": "eom",
+            },
+            "umap_parameters": {
+                "n_neighbors_rule": "min(15, max(2, n_records - 1))",
+                "n_components_rule": "min(5, embedding_dimensions, n_records - 2)",
+                "min_dist": 0.0,
+                "metric": "cosine",
+                "random_state": RANDOM_STATE,
+                "transform_seed": RANDOM_STATE,
+                "n_jobs": 1,
+                "compatibility_layout": True,
+            },
+        },
         "method": {
             "embedding_model": MODEL_NAME,
             "clustering_algorithm": "HDBSCAN",
             "dimensionality_reduction": "UMAP when available",
             "group_description_method": "Class-based TF-IDF with Telugu-aware tokenization",
+            "group_description_status": "Automatic keyword descriptors; not human-validated labels",
+            "silhouette_evaluation_space": "Original normalized multilingual embedding space (cosine distance)",
             "fixed_domain_taxonomy_used": False,
             "manual_labels_required": False,
         },
@@ -590,7 +660,7 @@ def main():
     data_path = Path(args.dataset).expanduser()
 
     print("=" * 64)
-    print("TELCO-QA - METRIC 05 V2.1")
+    print("TELCO-QA - METRIC 05 V2.1 FROZEN")
     print("Unsupervised Semantic Domain Discovery")
     print("=" * 64)
 
@@ -627,6 +697,7 @@ def main():
         labels=labels,
         cluster_details=cluster_details,
         embeddings=embeddings,
+        dataset_path=data_path,
     )
 
     # Merge analysis columns back into every original row.

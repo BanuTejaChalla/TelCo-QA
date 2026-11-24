@@ -69,3 +69,50 @@ manchi,manchide,114,27,85.71,High character similarity,"Chusthe, Internship oppo
 chesina,chusina,23,25,85.71,High character similarity,Preparation chesina questions exam lo raledu. || Preparation chesina questions exam lo raledu! People ki useful avvali anthe! || Preparation chesina questions exam lo raledu. Chuddam next em avuthundo.,"Simple ga cheppalante, Trailer chusina expectations ni movie exceed chesindi. || Idhi chaala mandi discuss chesthunnaru. Trailer chusina expectations ni movie exceed chesindi. || Naaku anipinchindhi enti ante, Trailer chusina expectations ni movie exceed chesindi.",,Batch 04,General similarity candidate,0
 icharu,ichesaru,105,20,85.71,High character similarity,"మురసు' cyclone dhaatiki, colleges ki holidays icharu || Idhi chala mandi discuss chesthunnaru. Assignment submission last date Friday ani notice icharu. || Final ga cheppalante, Placement session informative ga undi, practical tips icharu. Idhi naa opinion.","Over all ga, Bowling lo consistency ledhu, easy runs ichesaru! Let's see! || Honestly, Bowling lo consistency ledhu, easy runs ichesaru. || Simple ga cheppalante, Bowling lo consistency ledhu, easy runs ichesaru.",,Batch 04,General similarity candidate,0
 madhya,madhyalo,17,7,85.71,High character similarity,"Over all ga, Leaders madhya blame game valla actual issue solve avvatledu. People ki useful avvali anthe. || Personally, Leaders madhya blame game valla actual issue solve avvatledu. || Na opinion lo, Leaders madhya blame game valla actual issue solve avvatledu.","Leaders madhyalo blame game valla actual issue solve avvatledu. Mee opinion enti? || Honestly, Leaders madhyalo blame game valla actual issue solve avvatledu. || Final ga cheppalante, Leaders madhyalo blame game valla actual issue solve avvatledu.",,Batch 04,General similarity candidate,0
+cheyyalee,cheyyali,133,418,0.8235,general_similarity,,,Same word - spelling variation,Batch 05,general_similarity,1
+choodali,chudali,21,54,0.8000,general_similarity,,,Same word - spelling variation,Batch 05,general_similarity,1
+avuthundhi,avuthondi,36,56,0.8421,general_similarity,,,Same word - spelling variation,Batch 05,general_similarity,1
+avuthondi,avutundi,56,34,0.8235,general_similarity,,,Same word - spelling variation,Batch 05,general_similarity,1
+avuthundhi,avuthundo,36,101,0.8421,general_similarity,,,Different form,Batch 05,general_similarity,0
+cheyyaledu,cheyyalee,12,133,0.8421,general_similarity,,,Same word - spelling variation,Batch 05,general_similarity,1
+anipinchina,anipinchindhi,28,407,0.8333,general_similarity,,,Different word,Batch 05,general_similarity,0
+valla,valle,233,57,0.8000,general_similarity,,,Different form,Batch 05,general_similarity,0
+chesindi,ichindi,229,62,0.8000,general_similarity,,,Different word,Batch 05,general_similarity,0
+anipistondi,kanipisthundi,7,33,0.8333,general_similarity,,,Different word,Batch 05,general_similarity,0
+chepparu,chesaru,61,734,0.8000,general_similarity,,,Different word,Batch 06,general_similarity,0
+chesaaru,chestharu,256,226,0.8235,general_similarity,,,Different form,Batch 06,general_similarity,0
+antha,anthe,23,462,0.8000,general_similarity,,,Different form,Batch 06,general_similarity,0
+avvali,ivvali,462,51,0.8333,general_similarity,,,Different word,Batch 06,general_similarity,0
+chesaaru,chesadu,256,32,0.8000,general_similarity,,,Different form,Batch 06,general_similarity,0
+vachayi,vasthayi,68,28,0.8000,general_similarity,,,Different form,Batch 06,general_similarity,0
+manchhi,manchide,49,27,0.8000,general_similarity,,,Different form,Batch 06,general_similarity,0
+anipisthundhi,anipistondi,8,7,0.8333,general_similarity,,,Same word - spelling variation,Batch 06,general_similarity,1
+vachina,vachindi,40,76,0.8000,general_similarity,,,Different form,Batch 06,general_similarity,0
+avuthundo,avutundi,486,34,0.8235,general_similarity,,,Different form,Batch 06,general_similarity,0
+chesa,chesaru,,,,,,,,Batch 07,,0
+nundi,untundi,,,,,,,,Batch 07,,0
+avutundi,untundi,,,,,,,,Batch 07,,0
+chesthunnaru,chesukunnaru,,,,,,,,Batch 07,,0
+cheyyalem,cheyyali,,,,,,,,Batch 07,,0
+undali,undi,,,,,,,,Batch 07,,0
+undedi,undi,,,,,,,,Batch 07,,0
+cheyyadam,cheyyakunda,,,,,,,,Batch 07,,0
+chesina,chesindi,,,,,,,,Batch 07,,0
+chestharu,ichesaru,,,,,,,,Batch 07,,0
+ledu,raledu,,,,,,,,Batch 07,,0
+ichindi,nachindi,,,,,,,,Batch 07,,0
+nundi,undhi,,,,,,,,Batch 07,,0
+ichindi,vachindi,,,,,,,,Batch 07,,0
+batti,batting,,,,,,,,Batch 07,,0
+avuthondi,nadusthondi,,,,,,,,Batch 07,,0
+nadusthondi,vasthondi,,,,,,,,Batch 07,,0
+avvatledu,ivvaledu,,,,,,,,Batch 07,,0
+batti,kabatti,,,,,,,,Batch 07,,0
+chesa,chestha,,,,,,,,Batch 07,,0
+ayyanu,ayyaru,,,,,,,,Batch 07,,1
+anipinchayi,anipinchina,,,,,,,,Batch 07,,0
+chesadu,ichesaru,,,,,,,,Batch 07,,0
+anipinchayi,anipinchindi,,,,,,,,Batch 07,,1
+chesa,chesadu,,,,,,,,Batch 07,,0
+chesa,chesina,,,,,,,,Batch 07,,1
+cheyyaledu,cheyyalem,,,,,,,,Batch 07,,0

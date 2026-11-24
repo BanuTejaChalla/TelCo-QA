@@ -63,3 +63,18 @@ Zero-shot model scores are not calibrated probabilities of correctness. Performa
 Predictions should be inspected on representative examples before the metric is treated as validated. The existing topic labels are useful for comparison but are not independent ground truth.
 Current status
 Metric 05 is a zero-shot prototype. Its outputs are suitable for exploratory domain-distribution analysis and later integration testing. Validation and final aggregation decisions remain separate from the classifier's raw predictions.
+## Metric 4 — Annotation Reliability (In Progress) - 24-11-2026
+
+- **Objective:** Verify the availability and reliability of existing dataset annotations using Yama.
+- **Annotation availability:** The dataset contains sentiment and topic labels.
+- **Verification approach:** Yama independently predicts labels from the text, and its predictions are compared against the existing annotations.
+- **Sample evaluation:** Tested 25 records for sentiment and 25 records for topic.
+- **Yama prediction coverage:**
+  - Sentiment: 15/25 predictions (60%); 10 blank predictions.
+  - Topic: 17/25 predictions (68%); 8 blank predictions.
+  - Combined: 32/50 predictions (64%); 18 blank predictions.
+- **Observation:** Yama's non-blank predictions appeared reasonably accurate during the limited sample inspection. However, several predictions were returned blank, requiring further investigation.
+- **Current status:** Sample testing completed. Prediction extraction and blank-output handling need to be investigated before full-dataset evaluation.
+- **Data integrity:** Existing annotations are preserved. Disagreements are treated as review candidates and are not automatically corrected.
+- **Scoring approach:** Annotation availability and Yama prediction coverage are reported separately. Agreement is calculated among non-blank predictions. Datasets without applicable annotations receive a score of 0 for this metric and are excluded from the overall quality score aggregation.
+

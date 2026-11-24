@@ -1,0 +1,5 @@
+﻿word_1,word_2,original_label,reviewed_label,review_status,review_notes
+chesa,chesina,1,0,CONFIRMED,User-confirmed different grammatical forms.
+anipinchayi,anipinchindi,1,0,CONFIRMED,User-confirmed different grammatical forms.
+ayyanu,ayyaru,1,0,CONFIRMED,User-confirmed different person/number forms.
+anipisthondi,anipisthundi,1,1,CONFIRMED,User-confirmed same underlying Telugu word; spelling variation.

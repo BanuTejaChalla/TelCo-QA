@@ -1,0 +1,51 @@
+﻿source_row_index,text,annotation_column,provided_label,yama_selected_choice,yama_predicted_label,prediction_status,yama_selected_choice_probability,probability_assigned_to_provided_label,yama_answer_confidence,exact_label_match,review_recommended
+0,Chaala rojula tharvatha repu hometown velthunna,topic,General,abstain,,abstained,0.4533,0.4505,0.4649,,False
+1,Game Entra Entha Bagundhi,topic,General,label_0,Cricket & Sports,predicted,0.7401,0.0201,0.5194,False,True
+2,బయట తిండి మానేయడానికి చాలా కష్టపడి మొత్తానికి సాధించా.,topic,General,label_2,General,predicted,0.8153,0.8153,0.625,True,False
+3,baagundhi movie,topic,Movies & Entertainment,label_3,Movies & Entertainment,predicted,0.9284,0.9284,0.8092,True,False
+4,peddha nuisance chesthunnaru,topic,General,abstain,,abstained,0.6556,0.2513,0.5146,,False
+5,all time blockbuster kodthunnnam ra!!!,topic,Movies & Entertainment,label_3,Movies & Entertainment,predicted,0.9074,0.9074,0.7655,True,False
+6,"Malayalam, Tamil movies lo Telugu dialogues enduku cheptadi ra",topic,Movies & Entertainment,label_3,Movies & Entertainment,predicted,0.9247,0.9247,0.8011,True,False
+7,Ayina dialogue tappa expression ledu akkada,topic,Movies & Entertainment,abstain,,abstained,0.7799,0.0131,0.5867,,False
+8,తెలుగు ప్రజలందరికీ దీపావళి పండుగ శుభాకాంక్షలు,topic,General,abstain,,abstained,0.474,0.3871,0.4023,,False
+9,తెలుగు వారికి ఉన్న ఏకైక రాష్ట్రం ummadi andhra pradesh!,topic,Politics & Current Affairs,abstain,,abstained,0.6891,0.0776,0.4663,,False
+10,mana రాష్ట్రం lo ne first rank saadhinchadu,topic,Education & Students,abstain,,abstained,0.5291,0.0167,0.3242,,False
+11,కృతజ్ఞత leni manishi vaadu,topic,General,abstain,,abstained,0.6992,0.1986,0.5295,,False
+12,movie ki telugu dubbing sarigga cheppaledhu,topic,Movies & Entertainment,label_3,Movies & Entertainment,predicted,0.9264,0.9264,0.8049,True,False
+13,తండ్రికి తగ్గ తనయుడు.. Asia cup lo ఆర్యవీర్ సెహ్వాగ్ విధ్వంసం,topic,Cricket & Sports,label_0,Cricket & Sports,predicted,0.9062,0.9062,0.7626,True,False
+14,ఫిట్‌నెస్ సమస్యలతో ఇబ్బందుల్లో నితీశ్ కుమార్ రెడ్డి,topic,Cricket & Sports,abstain,,abstained,0.6573,0.0531,0.4524,,False
+15,సొంత ఖర్చులతోనే పోరాడి టైటిల్స్ సాధించిన shuttlers..!,topic,Cricket & Sports,label_0,Cricket & Sports,predicted,0.8098,0.8098,0.5965,True,False
+16,టైటిల్ race lo Tottenham venukapaddaru,topic,Cricket & Sports,label_0,Cricket & Sports,predicted,0.9147,0.9147,0.7801,True,False
+17,cinema pakka flop avthundhi,topic,Movies & Entertainment,label_3,Movies & Entertainment,predicted,0.9304,0.9304,0.814,True,False
+18,8వ 'Khelo India Youth Games' ఏర్పాట్లపై సీఎం సమీక్ష,topic,Cricket & Sports,label_1,Education & Students,predicted,0.4541,0.1163,0.3006,False,True
+19,హైదరాబాద్‌లో టపాసుల షాపులో అగ్ని ప్రమాదం jarigindhi,topic,General,abstain,,abstained,0.6958,0.1246,0.4885,,False
+20,"మురసు' cyclone dhaatiki, colleges ki holidays icharu",topic,Politics & Current Affairs,label_1,Education & Students,predicted,0.8688,0.021,0.6918,False,True
+21,ఈ సినిమా చాలా బాగుంది,topic,Movies & Entertainment,label_3,Movies & Entertainment,predicted,0.9277,0.9277,0.8076,True,False
+22,నాకు ఈ పాట చాలా నచ్చింది,topic,General,label_3,Movies & Entertainment,predicted,0.392,0.2357,0.3548,False,True
+23,ఈ రోజు weather చాలా pleasant గా ఉంది,topic,Politics & Current Affairs,label_2,General,predicted,0.8076,0.0141,0.627,False,True
+24,"Movie super undi, definitely watch cheyyali",topic,Movies & Entertainment,label_3,Movies & Entertainment,predicted,0.9288,0.9288,0.8099,True,False
+25,Naku ee product chala nachindi,topic,Technology & AI,label_2,General,predicted,0.7486,0.0316,0.5229,False,True
+26,"This movie is amazing, చాలా బాగుంది",topic,Movies & Entertainment,label_3,Movies & Entertainment,predicted,0.928,0.928,0.8081,True,False
+27,చాలా మంచి service ఇచ్చారు,topic,General,label_2,General,predicted,0.6504,0.6504,0.4874,True,False
+28,Food taste చాలా awesome గా ఉంది,topic,General,label_2,General,predicted,0.6216,0.6216,0.5067,True,False
+29,Ee phone performance chala bagundi,topic,Technology & AI,label_6,Technology & AI,predicted,0.8923,0.8923,0.7376,True,False
+30,"The app is easy to use, చాలా simple గా ఉంది",topic,Technology & AI,label_6,Technology & AI,predicted,0.4937,0.4937,0.3944,True,False
+31,నిన్న match చాలా exciting గా ఉంది,topic,Cricket & Sports,label_0,Cricket & Sports,predicted,0.8998,0.8998,0.7498,True,False
+32,ఈ dress నాకు చాలా cute గా అనిపించింది,topic,General,label_2,General,predicted,0.708,0.708,0.512,True,False
+33,Team చాలా well గా perform చేసింది,topic,Cricket & Sports,label_0,Cricket & Sports,predicted,0.9081,0.9081,0.7664,True,False
+34,Nenu ee book ni really enjoy chesanu,topic,General,label_2,General,predicted,0.7259,0.7259,0.5079,True,False
+35,ఇక్కడ customer service చాలా helpful గా ఉంది,topic,General,label_2,General,predicted,0.8124,0.8124,0.6221,True,False
+36,"The quality is excellent, డబ్బులు worth ఉన్నాయి",topic,General,label_2,General,predicted,0.4789,0.4789,0.4307,True,False
+37,ఈ place చాలా peaceful గా ఉంది,topic,General,label_2,General,predicted,0.5907,0.5907,0.5095,True,False
+38,Exam result chala happy ga undi,topic,Education & Students,label_1,Education & Students,predicted,0.7814,0.7814,0.5718,True,False
+39,మీ explanation చాలా clear గా ఉంది,topic,General,label_2,General,predicted,0.7076,0.7076,0.4911,True,False
+40,ఈ camera photos చాలా sharp గా ఉన్నాయి,topic,General,label_2,General,predicted,0.409,0.409,0.3266,True,False
+41,నాకు ఈ కొత్త update చాలా useful గా అనిపించింది,topic,General,label_2,General,predicted,0.692,0.692,0.448,True,False
+42,The restaurant food super undi,topic,General,abstain,,abstained,0.6244,0.2922,0.5152,,False
+43,ఈ song lyrics చాలా beautiful గా ఉన్నాయి,topic,Movies & Entertainment,abstain,,abstained,0.6945,0.1184,0.4981,,False
+44,Ninna trip chala memorable ga undi,topic,General,label_2,General,predicted,0.8126,0.8126,0.6316,True,False
+45,Product delivery fast ga vachindi,topic,Technology & AI,label_2,General,predicted,0.5661,0.0225,0.4432,False,True
+46,ఈ laptop చాలా smooth గా పనిచేస్తుంది,topic,Technology & AI,label_6,Technology & AI,predicted,0.7582,0.7582,0.5647,True,False
+47,Your idea చాలా interesting గా ఉంది,topic,General,label_2,General,predicted,0.7058,0.7058,0.4784,True,False
+48,ఈ show నిజంగా entertaining గా ఉంది,topic,General,label_3,Movies & Entertainment,predicted,0.9113,0.0175,0.7736,False,True
+49,Naku ee design chala attractive ga anipinchindi,topic,General,label_2,General,predicted,0.715,0.715,0.4893,True,False

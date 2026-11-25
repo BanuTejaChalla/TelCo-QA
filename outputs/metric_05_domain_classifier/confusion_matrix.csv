@@ -1,0 +1,8 @@
+﻿,predicted_Cricket & Sports,predicted_Education & Students,predicted_General,predicted_Movies & Entertainment,predicted_Multiple topics,predicted_Politics & Current Affairs,predicted_Technology & AI
+actual_Cricket & Sports,137,0,2,0,0,0,0
+actual_Education & Students,0,151,2,0,0,0,0
+actual_General,0,0,771,0,0,0,0
+actual_Movies & Entertainment,0,0,5,142,0,0,0
+actual_Multiple topics,0,0,1,0,31,0,1
+actual_Politics & Current Affairs,0,0,1,0,0,111,0
+actual_Technology & AI,0,0,4,0,0,0,69

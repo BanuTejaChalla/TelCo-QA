@@ -1,0 +1,9 @@
+{
+    "metric": "Transliteration Consistency",
+    "score": 67.54,
+    "total_variant_occurrences": 9749,
+    "confirmed_equivalence_groups": 23,
+    "groups_with_multiple_observed_variants": 23,
+    "method": "Frequency-weighted dominant-variant share across manually confirmed equivalent-word groups.",
+    "interpretation": "Measures within-dataset spelling consistency, not linguistic correctness."
+}

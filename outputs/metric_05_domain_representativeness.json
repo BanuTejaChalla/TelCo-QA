@@ -1,0 +1,2359 @@
+{
+    "metric": "Metric 05 - Domain Representativeness",
+    "version": "V1",
+    "evaluation_type": "Content-based domain discovery",
+    "generated_at": "2026-11-20T21:59:42.795665",
+    "dataset": {
+        "total_records": 7223,
+        "evaluated_records": 7223,
+        "empty_records": 0
+    },
+    "clustering": {
+        "clusters_discovered": 461,
+        "identified_records": 4847,
+        "unclassified_records": 2376,
+        "identification_percentage": 67.11
+    },
+    "domain_distribution": {
+        "Unknown / Unclassified": 2376,
+        "Other": 973,
+        "Sports": 871,
+        "Food and Lifestyle": 753,
+        "News and Current Affairs": 744,
+        "Entertainment": 633,
+        "Education": 535,
+        "Technology": 143,
+        "Politics": 111,
+        "Environment": 59,
+        "Health": 25
+    },
+    "domain_cluster_details": {
+        "0": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.803,
+            "record_count": 5
+        },
+        "1": {
+            "domain": "Sports",
+            "confidence": 0.7635,
+            "record_count": 5
+        },
+        "2": {
+            "domain": "Sports",
+            "confidence": 0.8013,
+            "record_count": 8
+        },
+        "3": {
+            "domain": "Sports",
+            "confidence": 0.7827,
+            "record_count": 6
+        },
+        "4": {
+            "domain": "Sports",
+            "confidence": 0.8006,
+            "record_count": 14
+        },
+        "5": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7955,
+            "record_count": 11
+        },
+        "6": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.784,
+            "record_count": 7
+        },
+        "7": {
+            "domain": "Entertainment",
+            "confidence": 0.8038,
+            "record_count": 9
+        },
+        "8": {
+            "domain": "Other",
+            "confidence": 0.8159,
+            "record_count": 9
+        },
+        "9": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8292,
+            "record_count": 72
+        },
+        "10": {
+            "domain": "Sports",
+            "confidence": 0.8106,
+            "record_count": 24
+        },
+        "11": {
+            "domain": "Other",
+            "confidence": 0.8013,
+            "record_count": 37
+        },
+        "12": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8183,
+            "record_count": 27
+        },
+        "13": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8084,
+            "record_count": 19
+        },
+        "14": {
+            "domain": "Entertainment",
+            "confidence": 0.789,
+            "record_count": 7
+        },
+        "15": {
+            "domain": "Technology",
+            "confidence": 0.8063,
+            "record_count": 7
+        },
+        "16": {
+            "domain": "Education",
+            "confidence": 0.8137,
+            "record_count": 11
+        },
+        "17": {
+            "domain": "Education",
+            "confidence": 0.8024,
+            "record_count": 7
+        },
+        "18": {
+            "domain": "Education",
+            "confidence": 0.8176,
+            "record_count": 5
+        },
+        "19": {
+            "domain": "Entertainment",
+            "confidence": 0.8075,
+            "record_count": 5
+        },
+        "20": {
+            "domain": "Sports",
+            "confidence": 0.786,
+            "record_count": 5
+        },
+        "21": {
+            "domain": "Sports",
+            "confidence": 0.8083,
+            "record_count": 5
+        },
+        "22": {
+            "domain": "Sports",
+            "confidence": 0.8152,
+            "record_count": 5
+        },
+        "23": {
+            "domain": "Sports",
+            "confidence": 0.8012,
+            "record_count": 7
+        },
+        "24": {
+            "domain": "Education",
+            "confidence": 0.8099,
+            "record_count": 8
+        },
+        "25": {
+            "domain": "Sports",
+            "confidence": 0.7961,
+            "record_count": 5
+        },
+        "26": {
+            "domain": "Education",
+            "confidence": 0.814,
+            "record_count": 7
+        },
+        "27": {
+            "domain": "Education",
+            "confidence": 0.8085,
+            "record_count": 5
+        },
+        "28": {
+            "domain": "Sports",
+            "confidence": 0.7862,
+            "record_count": 9
+        },
+        "29": {
+            "domain": "Sports",
+            "confidence": 0.8278,
+            "record_count": 9
+        },
+        "30": {
+            "domain": "Sports",
+            "confidence": 0.8028,
+            "record_count": 20
+        },
+        "31": {
+            "domain": "Environment",
+            "confidence": 0.7888,
+            "record_count": 6
+        },
+        "32": {
+            "domain": "Sports",
+            "confidence": 0.7923,
+            "record_count": 5
+        },
+        "33": {
+            "domain": "Sports",
+            "confidence": 0.8054,
+            "record_count": 5
+        },
+        "34": {
+            "domain": "Sports",
+            "confidence": 0.8154,
+            "record_count": 6
+        },
+        "35": {
+            "domain": "Other",
+            "confidence": 0.8473,
+            "record_count": 21
+        },
+        "36": {
+            "domain": "Sports",
+            "confidence": 0.8069,
+            "record_count": 8
+        },
+        "37": {
+            "domain": "Sports",
+            "confidence": 0.8201,
+            "record_count": 5
+        },
+        "38": {
+            "domain": "Sports",
+            "confidence": 0.8114,
+            "record_count": 6
+        },
+        "39": {
+            "domain": "Sports",
+            "confidence": 0.7911,
+            "record_count": 9
+        },
+        "40": {
+            "domain": "Sports",
+            "confidence": 0.809,
+            "record_count": 9
+        },
+        "41": {
+            "domain": "Sports",
+            "confidence": 0.8041,
+            "record_count": 8
+        },
+        "42": {
+            "domain": "Technology",
+            "confidence": 0.8227,
+            "record_count": 28
+        },
+        "43": {
+            "domain": "Technology",
+            "confidence": 0.832,
+            "record_count": 31
+        },
+        "44": {
+            "domain": "Other",
+            "confidence": 0.8121,
+            "record_count": 27
+        },
+        "45": {
+            "domain": "Sports",
+            "confidence": 0.826,
+            "record_count": 32
+        },
+        "46": {
+            "domain": "Education",
+            "confidence": 0.8058,
+            "record_count": 28
+        },
+        "47": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8283,
+            "record_count": 11
+        },
+        "48": {
+            "domain": "Sports",
+            "confidence": 0.804,
+            "record_count": 15
+        },
+        "49": {
+            "domain": "Sports",
+            "confidence": 0.8117,
+            "record_count": 5
+        },
+        "50": {
+            "domain": "Sports",
+            "confidence": 0.8114,
+            "record_count": 23
+        },
+        "51": {
+            "domain": "Other",
+            "confidence": 0.8166,
+            "record_count": 17
+        },
+        "52": {
+            "domain": "Education",
+            "confidence": 0.8074,
+            "record_count": 5
+        },
+        "53": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8184,
+            "record_count": 28
+        },
+        "54": {
+            "domain": "Other",
+            "confidence": 0.8136,
+            "record_count": 19
+        },
+        "55": {
+            "domain": "Entertainment",
+            "confidence": 0.8008,
+            "record_count": 6
+        },
+        "56": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.797,
+            "record_count": 5
+        },
+        "57": {
+            "domain": "Entertainment",
+            "confidence": 0.7978,
+            "record_count": 5
+        },
+        "58": {
+            "domain": "Entertainment",
+            "confidence": 0.8155,
+            "record_count": 8
+        },
+        "59": {
+            "domain": "Entertainment",
+            "confidence": 0.8087,
+            "record_count": 9
+        },
+        "60": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8243,
+            "record_count": 5
+        },
+        "61": {
+            "domain": "Other",
+            "confidence": 0.8322,
+            "record_count": 14
+        },
+        "62": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8178,
+            "record_count": 11
+        },
+        "63": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7957,
+            "record_count": 6
+        },
+        "64": {
+            "domain": "Entertainment",
+            "confidence": 0.8229,
+            "record_count": 15
+        },
+        "65": {
+            "domain": "Entertainment",
+            "confidence": 0.8282,
+            "record_count": 7
+        },
+        "66": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8383,
+            "record_count": 17
+        },
+        "67": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8179,
+            "record_count": 5
+        },
+        "68": {
+            "domain": "Education",
+            "confidence": 0.8136,
+            "record_count": 6
+        },
+        "69": {
+            "domain": "Education",
+            "confidence": 0.8448,
+            "record_count": 19
+        },
+        "70": {
+            "domain": "Education",
+            "confidence": 0.8163,
+            "record_count": 5
+        },
+        "71": {
+            "domain": "Education",
+            "confidence": 0.8336,
+            "record_count": 9
+        },
+        "72": {
+            "domain": "Education",
+            "confidence": 0.8256,
+            "record_count": 12
+        },
+        "73": {
+            "domain": "Other",
+            "confidence": 0.7961,
+            "record_count": 5
+        },
+        "74": {
+            "domain": "Entertainment",
+            "confidence": 0.8062,
+            "record_count": 5
+        },
+        "75": {
+            "domain": "Education",
+            "confidence": 0.8142,
+            "record_count": 5
+        },
+        "76": {
+            "domain": "Other",
+            "confidence": 0.8193,
+            "record_count": 34
+        },
+        "77": {
+            "domain": "Other",
+            "confidence": 0.8016,
+            "record_count": 6
+        },
+        "78": {
+            "domain": "Sports",
+            "confidence": 0.8253,
+            "record_count": 18
+        },
+        "79": {
+            "domain": "Sports",
+            "confidence": 0.8059,
+            "record_count": 5
+        },
+        "80": {
+            "domain": "Sports",
+            "confidence": 0.8303,
+            "record_count": 7
+        },
+        "81": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8322,
+            "record_count": 10
+        },
+        "82": {
+            "domain": "Health",
+            "confidence": 0.8208,
+            "record_count": 25
+        },
+        "83": {
+            "domain": "Education",
+            "confidence": 0.8011,
+            "record_count": 7
+        },
+        "84": {
+            "domain": "Education",
+            "confidence": 0.8203,
+            "record_count": 18
+        },
+        "85": {
+            "domain": "Education",
+            "confidence": 0.8074,
+            "record_count": 10
+        },
+        "86": {
+            "domain": "Sports",
+            "confidence": 0.8143,
+            "record_count": 9
+        },
+        "87": {
+            "domain": "Other",
+            "confidence": 0.8048,
+            "record_count": 13
+        },
+        "88": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8011,
+            "record_count": 6
+        },
+        "89": {
+            "domain": "Other",
+            "confidence": 0.8018,
+            "record_count": 5
+        },
+        "90": {
+            "domain": "Entertainment",
+            "confidence": 0.7958,
+            "record_count": 10
+        },
+        "91": {
+            "domain": "Education",
+            "confidence": 0.8137,
+            "record_count": 6
+        },
+        "92": {
+            "domain": "Other",
+            "confidence": 0.8092,
+            "record_count": 7
+        },
+        "93": {
+            "domain": "Sports",
+            "confidence": 0.8077,
+            "record_count": 8
+        },
+        "94": {
+            "domain": "Education",
+            "confidence": 0.8078,
+            "record_count": 20
+        },
+        "95": {
+            "domain": "Education",
+            "confidence": 0.8093,
+            "record_count": 7
+        },
+        "96": {
+            "domain": "Other",
+            "confidence": 0.8425,
+            "record_count": 31
+        },
+        "97": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8173,
+            "record_count": 60
+        },
+        "98": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8138,
+            "record_count": 23
+        },
+        "99": {
+            "domain": "Sports",
+            "confidence": 0.8208,
+            "record_count": 6
+        },
+        "100": {
+            "domain": "Other",
+            "confidence": 0.8045,
+            "record_count": 5
+        },
+        "101": {
+            "domain": "Other",
+            "confidence": 0.8143,
+            "record_count": 10
+        },
+        "102": {
+            "domain": "Politics",
+            "confidence": 0.8346,
+            "record_count": 15
+        },
+        "103": {
+            "domain": "Sports",
+            "confidence": 0.822,
+            "record_count": 6
+        },
+        "104": {
+            "domain": "Sports",
+            "confidence": 0.8134,
+            "record_count": 8
+        },
+        "105": {
+            "domain": "Sports",
+            "confidence": 0.8166,
+            "record_count": 9
+        },
+        "106": {
+            "domain": "Sports",
+            "confidence": 0.8046,
+            "record_count": 6
+        },
+        "107": {
+            "domain": "Sports",
+            "confidence": 0.7992,
+            "record_count": 7
+        },
+        "108": {
+            "domain": "Entertainment",
+            "confidence": 0.7977,
+            "record_count": 8
+        },
+        "109": {
+            "domain": "Other",
+            "confidence": 0.8297,
+            "record_count": 18
+        },
+        "110": {
+            "domain": "Entertainment",
+            "confidence": 0.8302,
+            "record_count": 20
+        },
+        "111": {
+            "domain": "Sports",
+            "confidence": 0.8207,
+            "record_count": 5
+        },
+        "112": {
+            "domain": "Other",
+            "confidence": 0.8017,
+            "record_count": 10
+        },
+        "113": {
+            "domain": "Sports",
+            "confidence": 0.8303,
+            "record_count": 16
+        },
+        "114": {
+            "domain": "Sports",
+            "confidence": 0.821,
+            "record_count": 17
+        },
+        "115": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8303,
+            "record_count": 55
+        },
+        "116": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7982,
+            "record_count": 7
+        },
+        "117": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7997,
+            "record_count": 11
+        },
+        "118": {
+            "domain": "Entertainment",
+            "confidence": 0.8177,
+            "record_count": 7
+        },
+        "119": {
+            "domain": "Entertainment",
+            "confidence": 0.8361,
+            "record_count": 21
+        },
+        "120": {
+            "domain": "Entertainment",
+            "confidence": 0.8039,
+            "record_count": 12
+        },
+        "121": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7999,
+            "record_count": 8
+        },
+        "122": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7972,
+            "record_count": 9
+        },
+        "123": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8044,
+            "record_count": 9
+        },
+        "124": {
+            "domain": "Education",
+            "confidence": 0.8055,
+            "record_count": 8
+        },
+        "125": {
+            "domain": "Entertainment",
+            "confidence": 0.8145,
+            "record_count": 27
+        },
+        "126": {
+            "domain": "Entertainment",
+            "confidence": 0.8307,
+            "record_count": 10
+        },
+        "127": {
+            "domain": "Entertainment",
+            "confidence": 0.8264,
+            "record_count": 13
+        },
+        "128": {
+            "domain": "Other",
+            "confidence": 0.8138,
+            "record_count": 12
+        },
+        "129": {
+            "domain": "Other",
+            "confidence": 0.8163,
+            "record_count": 10
+        },
+        "130": {
+            "domain": "Politics",
+            "confidence": 0.8048,
+            "record_count": 9
+        },
+        "131": {
+            "domain": "Sports",
+            "confidence": 0.8334,
+            "record_count": 22
+        },
+        "132": {
+            "domain": "Entertainment",
+            "confidence": 0.8334,
+            "record_count": 21
+        },
+        "133": {
+            "domain": "Sports",
+            "confidence": 0.8112,
+            "record_count": 5
+        },
+        "134": {
+            "domain": "Entertainment",
+            "confidence": 0.8226,
+            "record_count": 5
+        },
+        "135": {
+            "domain": "Other",
+            "confidence": 0.8406,
+            "record_count": 23
+        },
+        "136": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8243,
+            "record_count": 15
+        },
+        "137": {
+            "domain": "Entertainment",
+            "confidence": 0.7881,
+            "record_count": 6
+        },
+        "138": {
+            "domain": "Sports",
+            "confidence": 0.8026,
+            "record_count": 7
+        },
+        "139": {
+            "domain": "Entertainment",
+            "confidence": 0.8022,
+            "record_count": 5
+        },
+        "140": {
+            "domain": "Entertainment",
+            "confidence": 0.7931,
+            "record_count": 5
+        },
+        "141": {
+            "domain": "Entertainment",
+            "confidence": 0.82,
+            "record_count": 11
+        },
+        "142": {
+            "domain": "Sports",
+            "confidence": 0.8223,
+            "record_count": 5
+        },
+        "143": {
+            "domain": "Education",
+            "confidence": 0.8521,
+            "record_count": 25
+        },
+        "144": {
+            "domain": "Sports",
+            "confidence": 0.8093,
+            "record_count": 13
+        },
+        "145": {
+            "domain": "Sports",
+            "confidence": 0.8029,
+            "record_count": 11
+        },
+        "146": {
+            "domain": "Other",
+            "confidence": 0.8131,
+            "record_count": 5
+        },
+        "147": {
+            "domain": "Education",
+            "confidence": 0.8311,
+            "record_count": 12
+        },
+        "148": {
+            "domain": "Education",
+            "confidence": 0.8037,
+            "record_count": 5
+        },
+        "149": {
+            "domain": "Other",
+            "confidence": 0.818,
+            "record_count": 5
+        },
+        "150": {
+            "domain": "Entertainment",
+            "confidence": 0.8592,
+            "record_count": 32
+        },
+        "151": {
+            "domain": "Other",
+            "confidence": 0.804,
+            "record_count": 6
+        },
+        "152": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8234,
+            "record_count": 26
+        },
+        "153": {
+            "domain": "Entertainment",
+            "confidence": 0.827,
+            "record_count": 10
+        },
+        "154": {
+            "domain": "Other",
+            "confidence": 0.8107,
+            "record_count": 6
+        },
+        "155": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8264,
+            "record_count": 8
+        },
+        "156": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8188,
+            "record_count": 8
+        },
+        "157": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8146,
+            "record_count": 5
+        },
+        "158": {
+            "domain": "Other",
+            "confidence": 0.8179,
+            "record_count": 5
+        },
+        "159": {
+            "domain": "Sports",
+            "confidence": 0.8088,
+            "record_count": 6
+        },
+        "160": {
+            "domain": "Other",
+            "confidence": 0.796,
+            "record_count": 7
+        },
+        "161": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.807,
+            "record_count": 6
+        },
+        "162": {
+            "domain": "Sports",
+            "confidence": 0.8016,
+            "record_count": 6
+        },
+        "163": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7916,
+            "record_count": 5
+        },
+        "164": {
+            "domain": "Other",
+            "confidence": 0.8033,
+            "record_count": 5
+        },
+        "165": {
+            "domain": "Other",
+            "confidence": 0.813,
+            "record_count": 6
+        },
+        "166": {
+            "domain": "Education",
+            "confidence": 0.808,
+            "record_count": 11
+        },
+        "167": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8034,
+            "record_count": 7
+        },
+        "168": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8026,
+            "record_count": 5
+        },
+        "169": {
+            "domain": "Education",
+            "confidence": 0.8008,
+            "record_count": 5
+        },
+        "170": {
+            "domain": "Education",
+            "confidence": 0.8055,
+            "record_count": 13
+        },
+        "171": {
+            "domain": "Other",
+            "confidence": 0.823,
+            "record_count": 31
+        },
+        "172": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.811,
+            "record_count": 5
+        },
+        "173": {
+            "domain": "Education",
+            "confidence": 0.8046,
+            "record_count": 7
+        },
+        "174": {
+            "domain": "Other",
+            "confidence": 0.8082,
+            "record_count": 8
+        },
+        "175": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8174,
+            "record_count": 17
+        },
+        "176": {
+            "domain": "Environment",
+            "confidence": 0.7965,
+            "record_count": 8
+        },
+        "177": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8283,
+            "record_count": 26
+        },
+        "178": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8195,
+            "record_count": 15
+        },
+        "179": {
+            "domain": "Sports",
+            "confidence": 0.8117,
+            "record_count": 5
+        },
+        "180": {
+            "domain": "Other",
+            "confidence": 0.8089,
+            "record_count": 7
+        },
+        "181": {
+            "domain": "Other",
+            "confidence": 0.8106,
+            "record_count": 8
+        },
+        "182": {
+            "domain": "Education",
+            "confidence": 0.841,
+            "record_count": 30
+        },
+        "183": {
+            "domain": "Education",
+            "confidence": 0.834,
+            "record_count": 15
+        },
+        "184": {
+            "domain": "Education",
+            "confidence": 0.8186,
+            "record_count": 9
+        },
+        "185": {
+            "domain": "Sports",
+            "confidence": 0.8109,
+            "record_count": 5
+        },
+        "186": {
+            "domain": "Sports",
+            "confidence": 0.8189,
+            "record_count": 9
+        },
+        "187": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8114,
+            "record_count": 57
+        },
+        "188": {
+            "domain": "Sports",
+            "confidence": 0.8314,
+            "record_count": 30
+        },
+        "189": {
+            "domain": "Sports",
+            "confidence": 0.8325,
+            "record_count": 18
+        },
+        "190": {
+            "domain": "Sports",
+            "confidence": 0.7981,
+            "record_count": 5
+        },
+        "191": {
+            "domain": "Other",
+            "confidence": 0.7992,
+            "record_count": 9
+        },
+        "192": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8286,
+            "record_count": 29
+        },
+        "193": {
+            "domain": "Other",
+            "confidence": 0.8116,
+            "record_count": 9
+        },
+        "194": {
+            "domain": "Other",
+            "confidence": 0.8168,
+            "record_count": 5
+        },
+        "195": {
+            "domain": "Other",
+            "confidence": 0.8175,
+            "record_count": 9
+        },
+        "196": {
+            "domain": "Other",
+            "confidence": 0.8142,
+            "record_count": 19
+        },
+        "197": {
+            "domain": "Education",
+            "confidence": 0.819,
+            "record_count": 5
+        },
+        "198": {
+            "domain": "Sports",
+            "confidence": 0.8177,
+            "record_count": 6
+        },
+        "199": {
+            "domain": "Sports",
+            "confidence": 0.8191,
+            "record_count": 12
+        },
+        "200": {
+            "domain": "Sports",
+            "confidence": 0.8202,
+            "record_count": 10
+        },
+        "201": {
+            "domain": "Education",
+            "confidence": 0.817,
+            "record_count": 5
+        },
+        "202": {
+            "domain": "Sports",
+            "confidence": 0.8261,
+            "record_count": 9
+        },
+        "203": {
+            "domain": "Sports",
+            "confidence": 0.8054,
+            "record_count": 11
+        },
+        "204": {
+            "domain": "Education",
+            "confidence": 0.8116,
+            "record_count": 8
+        },
+        "205": {
+            "domain": "Other",
+            "confidence": 0.8092,
+            "record_count": 5
+        },
+        "206": {
+            "domain": "Politics",
+            "confidence": 0.8403,
+            "record_count": 5
+        },
+        "207": {
+            "domain": "Politics",
+            "confidence": 0.8434,
+            "record_count": 6
+        },
+        "208": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8112,
+            "record_count": 6
+        },
+        "209": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8255,
+            "record_count": 14
+        },
+        "210": {
+            "domain": "Education",
+            "confidence": 0.8174,
+            "record_count": 8
+        },
+        "211": {
+            "domain": "Education",
+            "confidence": 0.8248,
+            "record_count": 7
+        },
+        "212": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8056,
+            "record_count": 8
+        },
+        "213": {
+            "domain": "Education",
+            "confidence": 0.8243,
+            "record_count": 8
+        },
+        "214": {
+            "domain": "Education",
+            "confidence": 0.8211,
+            "record_count": 6
+        },
+        "215": {
+            "domain": "Education",
+            "confidence": 0.8197,
+            "record_count": 8
+        },
+        "216": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8112,
+            "record_count": 5
+        },
+        "217": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8078,
+            "record_count": 5
+        },
+        "218": {
+            "domain": "Sports",
+            "confidence": 0.8255,
+            "record_count": 10
+        },
+        "219": {
+            "domain": "Education",
+            "confidence": 0.8326,
+            "record_count": 5
+        },
+        "220": {
+            "domain": "Sports",
+            "confidence": 0.7987,
+            "record_count": 11
+        },
+        "221": {
+            "domain": "Sports",
+            "confidence": 0.8102,
+            "record_count": 5
+        },
+        "222": {
+            "domain": "Sports",
+            "confidence": 0.8293,
+            "record_count": 7
+        },
+        "223": {
+            "domain": "Sports",
+            "confidence": 0.8057,
+            "record_count": 13
+        },
+        "224": {
+            "domain": "Sports",
+            "confidence": 0.8245,
+            "record_count": 9
+        },
+        "225": {
+            "domain": "Sports",
+            "confidence": 0.8066,
+            "record_count": 6
+        },
+        "226": {
+            "domain": "Education",
+            "confidence": 0.8309,
+            "record_count": 6
+        },
+        "227": {
+            "domain": "Education",
+            "confidence": 0.8242,
+            "record_count": 6
+        },
+        "228": {
+            "domain": "Other",
+            "confidence": 0.8059,
+            "record_count": 5
+        },
+        "229": {
+            "domain": "Sports",
+            "confidence": 0.8237,
+            "record_count": 16
+        },
+        "230": {
+            "domain": "Sports",
+            "confidence": 0.8088,
+            "record_count": 6
+        },
+        "231": {
+            "domain": "Education",
+            "confidence": 0.8248,
+            "record_count": 9
+        },
+        "232": {
+            "domain": "Education",
+            "confidence": 0.8185,
+            "record_count": 8
+        },
+        "233": {
+            "domain": "Entertainment",
+            "confidence": 0.8343,
+            "record_count": 9
+        },
+        "234": {
+            "domain": "Sports",
+            "confidence": 0.8302,
+            "record_count": 10
+        },
+        "235": {
+            "domain": "Sports",
+            "confidence": 0.8336,
+            "record_count": 8
+        },
+        "236": {
+            "domain": "Sports",
+            "confidence": 0.8295,
+            "record_count": 7
+        },
+        "237": {
+            "domain": "Sports",
+            "confidence": 0.8313,
+            "record_count": 5
+        },
+        "238": {
+            "domain": "Other",
+            "confidence": 0.8364,
+            "record_count": 27
+        },
+        "239": {
+            "domain": "Sports",
+            "confidence": 0.8073,
+            "record_count": 6
+        },
+        "240": {
+            "domain": "Sports",
+            "confidence": 0.8109,
+            "record_count": 5
+        },
+        "241": {
+            "domain": "Education",
+            "confidence": 0.8386,
+            "record_count": 12
+        },
+        "242": {
+            "domain": "Education",
+            "confidence": 0.8307,
+            "record_count": 10
+        },
+        "243": {
+            "domain": "Sports",
+            "confidence": 0.8131,
+            "record_count": 9
+        },
+        "244": {
+            "domain": "Sports",
+            "confidence": 0.7819,
+            "record_count": 5
+        },
+        "245": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8356,
+            "record_count": 11
+        },
+        "246": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8247,
+            "record_count": 11
+        },
+        "247": {
+            "domain": "Other",
+            "confidence": 0.8142,
+            "record_count": 6
+        },
+        "248": {
+            "domain": "Other",
+            "confidence": 0.8176,
+            "record_count": 5
+        },
+        "249": {
+            "domain": "Education",
+            "confidence": 0.8229,
+            "record_count": 5
+        },
+        "250": {
+            "domain": "Education",
+            "confidence": 0.8065,
+            "record_count": 10
+        },
+        "251": {
+            "domain": "Education",
+            "confidence": 0.8244,
+            "record_count": 6
+        },
+        "252": {
+            "domain": "Sports",
+            "confidence": 0.8051,
+            "record_count": 7
+        },
+        "253": {
+            "domain": "Other",
+            "confidence": 0.7997,
+            "record_count": 8
+        },
+        "254": {
+            "domain": "Other",
+            "confidence": 0.7947,
+            "record_count": 5
+        },
+        "255": {
+            "domain": "Sports",
+            "confidence": 0.8102,
+            "record_count": 6
+        },
+        "256": {
+            "domain": "Sports",
+            "confidence": 0.8103,
+            "record_count": 7
+        },
+        "257": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7987,
+            "record_count": 5
+        },
+        "258": {
+            "domain": "Technology",
+            "confidence": 0.7944,
+            "record_count": 5
+        },
+        "259": {
+            "domain": "Sports",
+            "confidence": 0.8155,
+            "record_count": 6
+        },
+        "260": {
+            "domain": "Education",
+            "confidence": 0.8174,
+            "record_count": 6
+        },
+        "261": {
+            "domain": "Other",
+            "confidence": 0.8199,
+            "record_count": 34
+        },
+        "262": {
+            "domain": "Entertainment",
+            "confidence": 0.8012,
+            "record_count": 5
+        },
+        "263": {
+            "domain": "Other",
+            "confidence": 0.8203,
+            "record_count": 10
+        },
+        "264": {
+            "domain": "Education",
+            "confidence": 0.8167,
+            "record_count": 5
+        },
+        "265": {
+            "domain": "Education",
+            "confidence": 0.8088,
+            "record_count": 7
+        },
+        "266": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8012,
+            "record_count": 7
+        },
+        "267": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8086,
+            "record_count": 6
+        },
+        "268": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.795,
+            "record_count": 9
+        },
+        "269": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8086,
+            "record_count": 6
+        },
+        "270": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8036,
+            "record_count": 10
+        },
+        "271": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8031,
+            "record_count": 5
+        },
+        "272": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.822,
+            "record_count": 28
+        },
+        "273": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7908,
+            "record_count": 5
+        },
+        "274": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.805,
+            "record_count": 6
+        },
+        "275": {
+            "domain": "Technology",
+            "confidence": 0.8056,
+            "record_count": 6
+        },
+        "276": {
+            "domain": "Entertainment",
+            "confidence": 0.8175,
+            "record_count": 10
+        },
+        "277": {
+            "domain": "Entertainment",
+            "confidence": 0.8018,
+            "record_count": 9
+        },
+        "278": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8005,
+            "record_count": 11
+        },
+        "279": {
+            "domain": "Education",
+            "confidence": 0.8264,
+            "record_count": 28
+        },
+        "280": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8325,
+            "record_count": 48
+        },
+        "281": {
+            "domain": "Other",
+            "confidence": 0.8275,
+            "record_count": 35
+        },
+        "282": {
+            "domain": "Other",
+            "confidence": 0.8233,
+            "record_count": 17
+        },
+        "283": {
+            "domain": "Technology",
+            "confidence": 0.8029,
+            "record_count": 10
+        },
+        "284": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7948,
+            "record_count": 7
+        },
+        "285": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8035,
+            "record_count": 6
+        },
+        "286": {
+            "domain": "Technology",
+            "confidence": 0.798,
+            "record_count": 8
+        },
+        "287": {
+            "domain": "Other",
+            "confidence": 0.7963,
+            "record_count": 6
+        },
+        "288": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8039,
+            "record_count": 6
+        },
+        "289": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8055,
+            "record_count": 9
+        },
+        "290": {
+            "domain": "Other",
+            "confidence": 0.8205,
+            "record_count": 11
+        },
+        "291": {
+            "domain": "Other",
+            "confidence": 0.8016,
+            "record_count": 6
+        },
+        "292": {
+            "domain": "Other",
+            "confidence": 0.7903,
+            "record_count": 8
+        },
+        "293": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8019,
+            "record_count": 8
+        },
+        "294": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8157,
+            "record_count": 26
+        },
+        "295": {
+            "domain": "Politics",
+            "confidence": 0.8279,
+            "record_count": 6
+        },
+        "296": {
+            "domain": "Politics",
+            "confidence": 0.8241,
+            "record_count": 8
+        },
+        "297": {
+            "domain": "Other",
+            "confidence": 0.8042,
+            "record_count": 7
+        },
+        "298": {
+            "domain": "Environment",
+            "confidence": 0.8,
+            "record_count": 13
+        },
+        "299": {
+            "domain": "Other",
+            "confidence": 0.7988,
+            "record_count": 5
+        },
+        "300": {
+            "domain": "Sports",
+            "confidence": 0.8194,
+            "record_count": 5
+        },
+        "301": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8092,
+            "record_count": 6
+        },
+        "302": {
+            "domain": "Entertainment",
+            "confidence": 0.8049,
+            "record_count": 10
+        },
+        "303": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8226,
+            "record_count": 10
+        },
+        "304": {
+            "domain": "Other",
+            "confidence": 0.8232,
+            "record_count": 17
+        },
+        "305": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8055,
+            "record_count": 5
+        },
+        "306": {
+            "domain": "Education",
+            "confidence": 0.8107,
+            "record_count": 11
+        },
+        "307": {
+            "domain": "Education",
+            "confidence": 0.7967,
+            "record_count": 6
+        },
+        "308": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8276,
+            "record_count": 11
+        },
+        "309": {
+            "domain": "Politics",
+            "confidence": 0.8246,
+            "record_count": 14
+        },
+        "310": {
+            "domain": "Politics",
+            "confidence": 0.8096,
+            "record_count": 6
+        },
+        "311": {
+            "domain": "Entertainment",
+            "confidence": 0.8262,
+            "record_count": 31
+        },
+        "312": {
+            "domain": "Entertainment",
+            "confidence": 0.8047,
+            "record_count": 6
+        },
+        "313": {
+            "domain": "Technology",
+            "confidence": 0.807,
+            "record_count": 9
+        },
+        "314": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.829,
+            "record_count": 33
+        },
+        "315": {
+            "domain": "Entertainment",
+            "confidence": 0.8136,
+            "record_count": 17
+        },
+        "316": {
+            "domain": "Entertainment",
+            "confidence": 0.8036,
+            "record_count": 6
+        },
+        "317": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8179,
+            "record_count": 7
+        },
+        "318": {
+            "domain": "Other",
+            "confidence": 0.8302,
+            "record_count": 17
+        },
+        "319": {
+            "domain": "Sports",
+            "confidence": 0.8183,
+            "record_count": 9
+        },
+        "320": {
+            "domain": "Other",
+            "confidence": 0.8005,
+            "record_count": 5
+        },
+        "321": {
+            "domain": "Environment",
+            "confidence": 0.8069,
+            "record_count": 14
+        },
+        "322": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7927,
+            "record_count": 5
+        },
+        "323": {
+            "domain": "Other",
+            "confidence": 0.8151,
+            "record_count": 5
+        },
+        "324": {
+            "domain": "Other",
+            "confidence": 0.8018,
+            "record_count": 9
+        },
+        "325": {
+            "domain": "Other",
+            "confidence": 0.7985,
+            "record_count": 11
+        },
+        "326": {
+            "domain": "Other",
+            "confidence": 0.8104,
+            "record_count": 8
+        },
+        "327": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8117,
+            "record_count": 5
+        },
+        "328": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7848,
+            "record_count": 5
+        },
+        "329": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8011,
+            "record_count": 5
+        },
+        "330": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8123,
+            "record_count": 7
+        },
+        "331": {
+            "domain": "Other",
+            "confidence": 0.8385,
+            "record_count": 16
+        },
+        "332": {
+            "domain": "Other",
+            "confidence": 0.7938,
+            "record_count": 6
+        },
+        "333": {
+            "domain": "Other",
+            "confidence": 0.8187,
+            "record_count": 23
+        },
+        "334": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7971,
+            "record_count": 5
+        },
+        "335": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8064,
+            "record_count": 12
+        },
+        "336": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8136,
+            "record_count": 17
+        },
+        "337": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.814,
+            "record_count": 6
+        },
+        "338": {
+            "domain": "Sports",
+            "confidence": 0.8069,
+            "record_count": 7
+        },
+        "339": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7992,
+            "record_count": 7
+        },
+        "340": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8045,
+            "record_count": 7
+        },
+        "341": {
+            "domain": "Environment",
+            "confidence": 0.8004,
+            "record_count": 7
+        },
+        "342": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8003,
+            "record_count": 17
+        },
+        "343": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8027,
+            "record_count": 9
+        },
+        "344": {
+            "domain": "Other",
+            "confidence": 0.8114,
+            "record_count": 5
+        },
+        "345": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7937,
+            "record_count": 7
+        },
+        "346": {
+            "domain": "Technology",
+            "confidence": 0.8034,
+            "record_count": 7
+        },
+        "347": {
+            "domain": "Sports",
+            "confidence": 0.8092,
+            "record_count": 7
+        },
+        "348": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8065,
+            "record_count": 10
+        },
+        "349": {
+            "domain": "Sports",
+            "confidence": 0.8286,
+            "record_count": 6
+        },
+        "350": {
+            "domain": "Sports",
+            "confidence": 0.8171,
+            "record_count": 9
+        },
+        "351": {
+            "domain": "Other",
+            "confidence": 0.8227,
+            "record_count": 28
+        },
+        "352": {
+            "domain": "Other",
+            "confidence": 0.7995,
+            "record_count": 5
+        },
+        "353": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7964,
+            "record_count": 8
+        },
+        "354": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7992,
+            "record_count": 6
+        },
+        "355": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7993,
+            "record_count": 5
+        },
+        "356": {
+            "domain": "Politics",
+            "confidence": 0.8135,
+            "record_count": 6
+        },
+        "357": {
+            "domain": "Entertainment",
+            "confidence": 0.8242,
+            "record_count": 8
+        },
+        "358": {
+            "domain": "Entertainment",
+            "confidence": 0.8184,
+            "record_count": 5
+        },
+        "359": {
+            "domain": "Entertainment",
+            "confidence": 0.8199,
+            "record_count": 10
+        },
+        "360": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.802,
+            "record_count": 14
+        },
+        "361": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7966,
+            "record_count": 7
+        },
+        "362": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7997,
+            "record_count": 5
+        },
+        "363": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8232,
+            "record_count": 11
+        },
+        "364": {
+            "domain": "Entertainment",
+            "confidence": 0.8292,
+            "record_count": 11
+        },
+        "365": {
+            "domain": "Entertainment",
+            "confidence": 0.8268,
+            "record_count": 11
+        },
+        "366": {
+            "domain": "Entertainment",
+            "confidence": 0.8039,
+            "record_count": 6
+        },
+        "367": {
+            "domain": "Entertainment",
+            "confidence": 0.7886,
+            "record_count": 10
+        },
+        "368": {
+            "domain": "Other",
+            "confidence": 0.8111,
+            "record_count": 12
+        },
+        "369": {
+            "domain": "Entertainment",
+            "confidence": 0.8255,
+            "record_count": 12
+        },
+        "370": {
+            "domain": "Entertainment",
+            "confidence": 0.7882,
+            "record_count": 5
+        },
+        "371": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7909,
+            "record_count": 6
+        },
+        "372": {
+            "domain": "Entertainment",
+            "confidence": 0.7945,
+            "record_count": 7
+        },
+        "373": {
+            "domain": "Entertainment",
+            "confidence": 0.7937,
+            "record_count": 11
+        },
+        "374": {
+            "domain": "Other",
+            "confidence": 0.8249,
+            "record_count": 10
+        },
+        "375": {
+            "domain": "Entertainment",
+            "confidence": 0.824,
+            "record_count": 14
+        },
+        "376": {
+            "domain": "Entertainment",
+            "confidence": 0.8166,
+            "record_count": 7
+        },
+        "377": {
+            "domain": "Other",
+            "confidence": 0.8206,
+            "record_count": 7
+        },
+        "378": {
+            "domain": "Other",
+            "confidence": 0.8137,
+            "record_count": 5
+        },
+        "379": {
+            "domain": "Environment",
+            "confidence": 0.8144,
+            "record_count": 11
+        },
+        "380": {
+            "domain": "Other",
+            "confidence": 0.802,
+            "record_count": 7
+        },
+        "381": {
+            "domain": "Other",
+            "confidence": 0.8172,
+            "record_count": 5
+        },
+        "382": {
+            "domain": "Sports",
+            "confidence": 0.8071,
+            "record_count": 5
+        },
+        "383": {
+            "domain": "Technology",
+            "confidence": 0.8022,
+            "record_count": 6
+        },
+        "384": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8138,
+            "record_count": 6
+        },
+        "385": {
+            "domain": "Other",
+            "confidence": 0.8251,
+            "record_count": 8
+        },
+        "386": {
+            "domain": "Technology",
+            "confidence": 0.8167,
+            "record_count": 6
+        },
+        "387": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8063,
+            "record_count": 6
+        },
+        "388": {
+            "domain": "Entertainment",
+            "confidence": 0.7984,
+            "record_count": 6
+        },
+        "389": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7913,
+            "record_count": 6
+        },
+        "390": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.817,
+            "record_count": 10
+        },
+        "391": {
+            "domain": "Sports",
+            "confidence": 0.7969,
+            "record_count": 6
+        },
+        "392": {
+            "domain": "Other",
+            "confidence": 0.8126,
+            "record_count": 5
+        },
+        "393": {
+            "domain": "Other",
+            "confidence": 0.8212,
+            "record_count": 13
+        },
+        "394": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.784,
+            "record_count": 5
+        },
+        "395": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7956,
+            "record_count": 8
+        },
+        "396": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8045,
+            "record_count": 5
+        },
+        "397": {
+            "domain": "Sports",
+            "confidence": 0.8321,
+            "record_count": 13
+        },
+        "398": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8123,
+            "record_count": 7
+        },
+        "399": {
+            "domain": "Other",
+            "confidence": 0.8001,
+            "record_count": 5
+        },
+        "400": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7867,
+            "record_count": 7
+        },
+        "401": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8153,
+            "record_count": 7
+        },
+        "402": {
+            "domain": "Other",
+            "confidence": 0.813,
+            "record_count": 10
+        },
+        "403": {
+            "domain": "Entertainment",
+            "confidence": 0.8097,
+            "record_count": 16
+        },
+        "404": {
+            "domain": "Entertainment",
+            "confidence": 0.8227,
+            "record_count": 9
+        },
+        "405": {
+            "domain": "Technology",
+            "confidence": 0.8046,
+            "record_count": 5
+        },
+        "406": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8137,
+            "record_count": 8
+        },
+        "407": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7968,
+            "record_count": 6
+        },
+        "408": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8221,
+            "record_count": 16
+        },
+        "409": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8167,
+            "record_count": 5
+        },
+        "410": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7838,
+            "record_count": 5
+        },
+        "411": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7979,
+            "record_count": 6
+        },
+        "412": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8015,
+            "record_count": 5
+        },
+        "413": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8034,
+            "record_count": 5
+        },
+        "414": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8102,
+            "record_count": 9
+        },
+        "415": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.8037,
+            "record_count": 6
+        },
+        "416": {
+            "domain": "Entertainment",
+            "confidence": 0.7822,
+            "record_count": 6
+        },
+        "417": {
+            "domain": "Entertainment",
+            "confidence": 0.7999,
+            "record_count": 26
+        },
+        "418": {
+            "domain": "Other",
+            "confidence": 0.7935,
+            "record_count": 5
+        },
+        "419": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.811,
+            "record_count": 16
+        },
+        "420": {
+            "domain": "Other",
+            "confidence": 0.824,
+            "record_count": 22
+        },
+        "421": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7966,
+            "record_count": 12
+        },
+        "422": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8029,
+            "record_count": 36
+        },
+        "423": {
+            "domain": "Sports",
+            "confidence": 0.8066,
+            "record_count": 6
+        },
+        "424": {
+            "domain": "Politics",
+            "confidence": 0.823,
+            "record_count": 7
+        },
+        "425": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7983,
+            "record_count": 9
+        },
+        "426": {
+            "domain": "Entertainment",
+            "confidence": 0.8011,
+            "record_count": 7
+        },
+        "427": {
+            "domain": "Other",
+            "confidence": 0.7916,
+            "record_count": 8
+        },
+        "428": {
+            "domain": "Food and Lifestyle",
+            "confidence": 0.7947,
+            "record_count": 9
+        },
+        "429": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7903,
+            "record_count": 5
+        },
+        "430": {
+            "domain": "Politics",
+            "confidence": 0.8169,
+            "record_count": 6
+        },
+        "431": {
+            "domain": "Other",
+            "confidence": 0.8265,
+            "record_count": 8
+        },
+        "432": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7993,
+            "record_count": 10
+        },
+        "433": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7957,
+            "record_count": 12
+        },
+        "434": {
+            "domain": "Sports",
+            "confidence": 0.8249,
+            "record_count": 5
+        },
+        "435": {
+            "domain": "Politics",
+            "confidence": 0.8367,
+            "record_count": 6
+        },
+        "436": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8047,
+            "record_count": 7
+        },
+        "437": {
+            "domain": "Entertainment",
+            "confidence": 0.8047,
+            "record_count": 10
+        },
+        "438": {
+            "domain": "Entertainment",
+            "confidence": 0.8031,
+            "record_count": 8
+        },
+        "439": {
+            "domain": "Sports",
+            "confidence": 0.8088,
+            "record_count": 6
+        },
+        "440": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7926,
+            "record_count": 7
+        },
+        "441": {
+            "domain": "Technology",
+            "confidence": 0.8065,
+            "record_count": 5
+        },
+        "442": {
+            "domain": "Entertainment",
+            "confidence": 0.8026,
+            "record_count": 20
+        },
+        "443": {
+            "domain": "Entertainment",
+            "confidence": 0.8117,
+            "record_count": 6
+        },
+        "444": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8065,
+            "record_count": 7
+        },
+        "445": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.7995,
+            "record_count": 9
+        },
+        "446": {
+            "domain": "Politics",
+            "confidence": 0.8226,
+            "record_count": 6
+        },
+        "447": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8204,
+            "record_count": 8
+        },
+        "448": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8003,
+            "record_count": 10
+        },
+        "449": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.8032,
+            "record_count": 5
+        },
+        "450": {
+            "domain": "News and Current Affairs",
+            "confidence": 0.793,
+            "record_count": 10
+        },
+        "451": {
+            "domain": "Sports",
+            "confidence": 0.814,
+            "record_count": 5
+        },
+        "452": {
+            "domain": "Technology",
+            "confidence": 0.8179,
+            "record_count": 10
+        },
+        "453": {
+            "domain": "Sports",
+            "confidence": 0.8044,
+            "record_count": 5
+        },
+        "454": {
+            "domain": "Politics",
+            "confidence": 0.8176,
+            "record_count": 5
+        },
+        "455": {
+            "domain": "Politics",
+            "confidence": 0.8241,
+            "record_count": 6
+        },
+        "456": {
+            "domain": "Other",
+            "confidence": 0.8191,
+            "record_count": 5
+        },
+        "457": {
+            "domain": "Sports",
+            "confidence": 0.8132,
+            "record_count": 7
+        },
+        "458": {
+            "domain": "Sports",
+            "confidence": 0.8198,
+            "record_count": 5
+        },
+        "459": {
+            "domain": "Sports",
+            "confidence": 0.8231,
+            "record_count": 16
+        },
+        "460": {
+            "domain": "Sports",
+            "confidence": 0.8169,
+            "record_count": 5
+        }
+    },
+    "component_scores": {
+        "domain_diversity": 100.0,
+        "domain_balance": 86.34,
+        "domain_concentration": 79.93,
+        "classification_confidence": 54.73
+    },
+    "weights": {
+        "domain_diversity": 0.3,
+        "domain_balance": 0.3,
+        "domain_concentration": 0.25,
+        "classification_confidence": 0.15
+    },
+    "overall_score": 84.09,
+    "quality_tier": "High",
+    "limitations": [
+        "Domain labels are inferred from semantic clusters.",
+        "Multilingual embeddings may struggle with informal Romanized Telugu.",
+        "Cluster-level labels can hide multiple subjects within one cluster.",
+        "Unknown records are not forced into a domain.",
+        "Diversity does not prove representativeness of an intended population.",
+        "Weights and thresholds are provisional and require validation."
+    ]
+}

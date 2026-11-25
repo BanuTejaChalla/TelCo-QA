@@ -1,0 +1,2 @@
+﻿metric,status,reason,annotation_columns,total_records,records_with_annotations,records_without_annotations,records_complete_across_detected_columns,annotation_availability_score,annotation_availability_percent,overall_score_inclusion,overall_score_exclusion_reason,column_completeness,input_file
+Metric 04 - Annotation Availability,completed,,"['sentiment', 'topic']",7223,7223,0,7223,100.0,100.0,True,,"{""sentiment"": 100.0, ""topic"": 100.0}",C:\Users\banut\OneDrive\Desktop\Sem 7\TelcoQA\TelCo-QA\data\raw\TelCo-QA-Dataset.xlsx

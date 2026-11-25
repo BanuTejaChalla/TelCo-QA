@@ -1,0 +1,2059 @@
+{
+    "metric": "Metric 05 - Unsupervised Semantic Domain Discovery",
+    "version": "V2.1-FROZEN",
+    "method_id": "telcoqa.metric05.semantic-domain-discovery.v2.1",
+    "generated_at_utc": "2026-11-22T18:44:39.541810+00:00",
+    "reproducibility": {
+        "dataset_sha256": "d5a280574417349b1ca21625395be7e0d6cd8615387161fe20367f24c5fbde7d",
+        "environment": {
+            "python_version": "3.14.7",
+            "platform": "Windows-11-10.0.26200-SP0",
+            "numpy_version": "2.5.4",
+            "pandas_version": "3.1.1",
+            "scikit_learn_version": "1.9.1",
+            "sentence_transformers_version": "6.3.0",
+            "umap_learn_version": "0.6.0",
+            "hdbscan_version": "0.8.44"
+        },
+        "random_state": 42,
+        "embedding_batch_size": 32,
+        "silhouette_sample_size": 2000,
+        "hdbscan_parameters": {
+            "min_cluster_size_rule": "clip(round(sqrt(n_records) * 0.5), 10, 50)",
+            "min_samples_rule": "max(2, round(min_cluster_size * 0.25))",
+            "metric": "euclidean",
+            "cluster_selection_method": "eom"
+        },
+        "umap_parameters": {
+            "n_neighbors_rule": "min(15, max(2, n_records - 1))",
+            "n_components_rule": "min(5, embedding_dimensions, n_records - 2)",
+            "min_dist": 0.0,
+            "metric": "cosine",
+            "random_state": 42,
+            "transform_seed": 42,
+            "n_jobs": 1,
+            "compatibility_layout": true
+        }
+    },
+    "method": {
+        "embedding_model": "intfloat/multilingual-e5-base",
+        "clustering_algorithm": "HDBSCAN",
+        "dimensionality_reduction": "UMAP when available",
+        "group_description_method": "Class-based TF-IDF with Telugu-aware tokenization",
+        "group_description_status": "Automatic keyword descriptors; not human-validated labels",
+        "silhouette_evaluation_space": "Original normalized multilingual embedding space (cosine distance)",
+        "fixed_domain_taxonomy_used": false,
+        "manual_labels_required": false
+    },
+    "dataset": {
+        "total_records": 7223,
+        "evaluated_records": 7223,
+        "empty_records": 0,
+        "text_column": "text"
+    },
+    "discovery": {
+        "discovered_groups": 73,
+        "assigned_records": 6287,
+        "unassigned_records": 936,
+        "coverage_percentage": 87.04,
+        "group_size_distribution": {
+            "0": 68,
+            "1": 49,
+            "2": 60,
+            "3": 58,
+            "4": 55,
+            "5": 73,
+            "6": 75,
+            "7": 63,
+            "8": 64,
+            "9": 72,
+            "10": 75,
+            "11": 51,
+            "12": 68,
+            "13": 98,
+            "14": 58,
+            "15": 55,
+            "16": 62,
+            "17": 60,
+            "18": 91,
+            "19": 63,
+            "20": 46,
+            "21": 57,
+            "22": 70,
+            "23": 58,
+            "24": 57,
+            "25": 91,
+            "26": 62,
+            "27": 69,
+            "28": 53,
+            "29": 72,
+            "30": 76,
+            "31": 72,
+            "32": 57,
+            "33": 61,
+            "34": 53,
+            "35": 59,
+            "36": 47,
+            "37": 60,
+            "38": 62,
+            "39": 66,
+            "40": 66,
+            "41": 46,
+            "42": 63,
+            "43": 54,
+            "44": 68,
+            "45": 51,
+            "46": 68,
+            "47": 57,
+            "48": 48,
+            "49": 145,
+            "50": 90,
+            "51": 69,
+            "52": 86,
+            "53": 62,
+            "54": 63,
+            "55": 66,
+            "56": 167,
+            "57": 88,
+            "58": 55,
+            "59": 62,
+            "60": 128,
+            "61": 42,
+            "62": 82,
+            "63": 62,
+            "64": 100,
+            "65": 67,
+            "66": 73,
+            "67": 164,
+            "68": 130,
+            "69": 58,
+            "70": 61,
+            "71": 59,
+            "72": 1221
+        },
+        "shannon_entropy": 3.898,
+        "normalized_entropy": 0.9085,
+        "effective_group_count": 49.3,
+        "largest_group_share": 0.1942,
+        "herfindahl_concentration": 0.0478
+    },
+    "cluster_structure": {
+        "mean_group_cohesion": 0.959,
+        "silhouette_score_cosine": 0.2111,
+        "groups": {
+            "0": {
+                "group_id": 0,
+                "generated_description": "available · anthe naku · ante ee · ga ee · honestly ee",
+                "top_terms": [
+                    "available",
+                    "anthe naku",
+                    "ante ee",
+                    "ga ee",
+                    "honestly ee",
+                    "anthe naaku",
+                    "anthe idhi",
+                    "anthe honestly"
+                ],
+                "record_count": 68,
+                "mean_cosine_cohesion": 0.9706,
+                "representative_record_indices": [
+                    2387,
+                    704,
+                    2043
+                ],
+                "representative_texts": [
+                    "Honestly, Ee tool Windows and Linux rendu platforms lo available undhi.",
+                    "Final ga cheppalante, Ee tool Windows and Linux rendu platforms lo available undhi.",
+                    "Personally, Ee tool Windows and Linux rendu platforms lo available undi. Let's see."
+                ]
+            },
+            "1": {
+                "group_id": 1,
+                "generated_description": "lo chudalanukuntunna · lo hyderabad · anthe ee · lo ee · anthe simple",
+                "top_terms": [
+                    "lo chudalanukuntunna",
+                    "lo hyderabad",
+                    "anthe ee",
+                    "lo ee",
+                    "anthe simple",
+                    "chestha chusthe",
+                    "inkaa konchem",
+                    "chesthunnaru"
+                ],
+                "record_count": 49,
+                "mean_cosine_cohesion": 0.9752,
+                "representative_record_indices": [
+                    1761,
+                    3465,
+                    6694
+                ],
+                "representative_texts": [
+                    "Ee weekend theatre lo chudalanukuntunna, free time batti plan chestha. Let's see.",
+                    "Personally, Ee weekend theatre lo chudalanukuntunna, free time batti plan chestha. Let's see.",
+                    "Personally, Ee weekend theatre lo chudalanukuntunna, free time batti plan chestha."
+                ]
+            },
+            "2": {
+                "group_id": 2,
+                "generated_description": "let's final · chesindi final · improve cheyali · improve cheyyalee · anipinchindhi enti",
+                "top_terms": [
+                    "let's final",
+                    "chesindi final",
+                    "improve cheyali",
+                    "improve cheyyalee",
+                    "anipinchindhi enti",
+                    "inkaa",
+                    "improve cheyyali",
+                    "inka konchem"
+                ],
+                "record_count": 60,
+                "mean_cosine_cohesion": 0.9722,
+                "representative_record_indices": [
+                    4201,
+                    355,
+                    5971
+                ],
+                "representative_texts": [
+                    "Government ee propositiveal meeda official statement release chesindi. Idhi naa opinion.",
+                    "Honestly, Government ee propositiveal meeda official statement release chesindi. Idhi naa opinion.",
+                    "Final ga cheppalante, Government ee propositiveal meeda official statement release chesindi. Idhi naa opinion."
+                ]
+            },
+            "3": {
+                "group_id": 3,
+                "generated_description": "marks portal · lo results · lo check · marks · let's nijanga",
+                "top_terms": [
+                    "marks portal",
+                    "lo results",
+                    "lo check",
+                    "marks",
+                    "let's nijanga",
+                    "anipinchindhi enti",
+                    "mandi",
+                    "mandi discuss"
+                ],
+                "record_count": 58,
+                "mean_cosine_cohesion": 0.9748,
+                "representative_record_indices": [
+                    3365,
+                    2552,
+                    626
+                ],
+                "representative_texts": [
+                    "Results publish ayyaka marks portal lo check chesukovachu.",
+                    "Results publish ayyaka marks portal lo check chesukovachu. Idhi naa opinion.",
+                    "Na opinion lo, Results publish ayyaka marks portal lo check chesukovachu."
+                ]
+            },
+            "4": {
+                "group_id": 4,
+                "generated_description": "launch · launch event · let's audio · chesaaru inka · ki sambandhinchina",
+                "top_terms": [
+                    "launch",
+                    "launch event",
+                    "let's audio",
+                    "chesaaru inka",
+                    "ki sambandhinchina",
+                    "let's idhi",
+                    "let's honestly",
+                    "let's na"
+                ],
+                "record_count": 55,
+                "mean_cosine_cohesion": 0.9745,
+                "representative_record_indices": [
+                    2674,
+                    6550,
+                    5278
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Audio launch event ki sambandhinchina photos online lo share chesaru. Let's see.",
+                    "Audio launch event ki sambandhinchina photos online lo share chesaru. Let's see.",
+                    "Audio launch event ki sambandhinchina photos online lo share chesaru. Let's see."
+                ]
+            },
+            "5": {
+                "group_id": 5,
+                "generated_description": "important honestly · half matram · lo half · maintain chesaaru · maintain chesaru",
+                "top_terms": [
+                    "important honestly",
+                    "half matram",
+                    "lo half",
+                    "maintain chesaaru",
+                    "maintain chesaru",
+                    "maintain",
+                    "lo telusthayi",
+                    "anipinchina second"
+                ],
+                "record_count": 73,
+                "mean_cosine_cohesion": 0.9505,
+                "representative_record_indices": [
+                    4186,
+                    7088,
+                    1189
+                ],
+                "representative_texts": [
+                    "Idhi chaala mandi discuss chesthunnaru. First half nunchi last varaku interest maintain chesaru.",
+                    "Na opinion lo, First half nunchi last varaku interest maintain chesaru. Hope next time inkaa better ga untundi.",
+                    "Chusthe, First half nunchi last varaku interest maintain chesaru. Idhi naa opinion."
+                ]
+            },
+            "6": {
+                "group_id": 6,
+                "generated_description": "miyapur · miyapur నుండి · batting · cheppalante toss · inkaa better",
+                "top_terms": [
+                    "miyapur",
+                    "miyapur నుండి",
+                    "batting",
+                    "cheppalante toss",
+                    "inkaa better",
+                    "inkaa",
+                    "mee opinion",
+                    "chesukundi mee"
+                ],
+                "record_count": 75,
+                "mean_cosine_cohesion": 0.9614,
+                "representative_record_indices": [
+                    2695,
+                    2171,
+                    2763
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Toss gelichina team first batting choose chesukundi. Idhi naa opinion.",
+                    "Idhi chaala mandi discuss chesthunnaru. Toss gelichina team first batting choose chesukundi.",
+                    "Personally, Toss gelichina team first batting choose chesukundi. Let's see."
+                ]
+            },
+            "7": {
+                "group_id": 7,
+                "generated_description": "chestharu simple · lo library · library · library timings · lo extend",
+                "top_terms": [
+                    "chestharu simple",
+                    "lo library",
+                    "library",
+                    "library timings",
+                    "lo extend",
+                    "anipinchindhi enti",
+                    "naku anipinchindhi",
+                    "naku"
+                ],
+                "record_count": 63,
+                "mean_cosine_cohesion": 0.963,
+                "representative_record_indices": [
+                    3726,
+                    4005,
+                    2293
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Library timings exams time lo extend chestharu. Let's see.",
+                    "Na opinion lo, Library timings exams time lo extend chestharu.",
+                    "Final ga cheppalante, Library timings exams time lo extend chestharu. Let's see."
+                ]
+            },
+            "8": {
+                "group_id": 8,
+                "generated_description": "opinion ee · opinion naaku · opinion personally · opinion nijanga · ante",
+                "top_terms": [
+                    "opinion ee",
+                    "opinion naaku",
+                    "opinion personally",
+                    "opinion nijanga",
+                    "ante",
+                    "chesthunnaru chusthe",
+                    "anipinchindhi enti",
+                    "avvali"
+                ],
+                "record_count": 64,
+                "mean_cosine_cohesion": 0.9728,
+                "representative_record_indices": [
+                    7132,
+                    4746,
+                    3981
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Ee feature beta version lo test chesthunnaru. Let's see.",
+                    "Ee feature beta version lo test chesthunnaru. Let's see.",
+                    "Honestly, Ee feature beta version lo test chesthunnaru. Idhi naa opinion."
+                ]
+            },
+            "9": {
+                "group_id": 9,
+                "generated_description": "impressive personally · impressive people · ai tools · impressive mee · impressive nijanga",
+                "top_terms": [
+                    "impressive personally",
+                    "impressive people",
+                    "ai tools",
+                    "impressive mee",
+                    "impressive nijanga",
+                    "avuthundo naaku",
+                    "impressive ee",
+                    "let's ga"
+                ],
+                "record_count": 72,
+                "mean_cosine_cohesion": 0.9489,
+                "representative_record_indices": [
+                    3705,
+                    2069,
+                    5911
+                ],
+                "representative_texts": [
+                    "Over all ga, Ee movie release date confirm ayyindi, updates kosam wait chesthunna. Idhi naa opinion.",
+                    "Ee movie release date confirm ayyindhi, updates kosam wait chesthunna. People ki useful avvali anthe.",
+                    "Personally, Ee movie release date confirm ayyindi, updates kosam wait chesthunna. Inka konchem improve cheyyali."
+                ]
+            },
+            "10": {
+                "group_id": 10,
+                "generated_description": "lab systems · lo election · important overall · lo lab · lab",
+                "top_terms": [
+                    "lab systems",
+                    "lo election",
+                    "important overall",
+                    "lo lab",
+                    "lab",
+                    "important nijanga",
+                    "important personally",
+                    "important honestly"
+                ],
+                "record_count": 75,
+                "mean_cosine_cohesion": 0.9469,
+                "representative_record_indices": [
+                    5330,
+                    2886,
+                    4909
+                ],
+                "representative_texts": [
+                    "Final ga cheppalante, Election schedule gurinchi commission update ichindi. Idhi naa opinion.",
+                    "Final ga cheppalante, Election schedule gurinchi commission update ichindi. Let's see.",
+                    "Final ga cheppalante, Election schedule gurinchi commission update ichindi. Let's see."
+                ]
+            },
+            "11": {
+                "group_id": 11,
+                "generated_description": "lo player · management · naku anipinchindhi · naku · naaku anipinchindhi",
+                "top_terms": [
+                    "lo player",
+                    "management",
+                    "naku anipinchindhi",
+                    "naku",
+                    "naaku anipinchindhi",
+                    "opinion enti",
+                    "mee opinion",
+                    "anthe player"
+                ],
+                "record_count": 51,
+                "mean_cosine_cohesion": 0.9722,
+                "representative_record_indices": [
+                    1525,
+                    5012,
+                    7148
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Player injury status gurinchi team management update ivvali. Let's see.",
+                    "Honestly, Player injury status gurinchi team management update ivvali. Idhi naa opinion.",
+                    "Personally, Player injury status gurinchi team management update ivvali. Idhi naa opinion."
+                ]
+            },
+            "12": {
+                "group_id": 12,
+                "generated_description": "lab sessions · lab · kosam · let's final · avuthayi fans",
+                "top_terms": [
+                    "lab sessions",
+                    "lab",
+                    "kosam",
+                    "let's final",
+                    "avuthayi fans",
+                    "nunchi",
+                    "nundi lab",
+                    "avuthayi"
+                ],
+                "record_count": 68,
+                "mean_cosine_cohesion": 0.9599,
+                "representative_record_indices": [
+                    774,
+                    5878,
+                    6718
+                ],
+                "representative_texts": [
+                    "Idhi chaala mandi discuss chesthunnaru. Next week nunchi lab sessions start avuthayi.",
+                    "Idhi chala mandi discuss chesthunnaru. Next week nunchi lab sessions start avuthayi.",
+                    "Idhi chala mandi discuss chesthunnaru. Next week nunchi lab sessions start avuthayi."
+                ]
+            },
+            "13": {
+                "group_id": 13,
+                "generated_description": "ayindi people · eligible branches · lo internship · manchhi chance · let's internship",
+                "top_terms": [
+                    "ayindi people",
+                    "eligible branches",
+                    "lo internship",
+                    "manchhi chance",
+                    "let's internship",
+                    "manchhi",
+                    "lo extend",
+                    "manchi"
+                ],
+                "record_count": 98,
+                "mean_cosine_cohesion": 0.9475,
+                "representative_record_indices": [
+                    751,
+                    6418,
+                    698
+                ],
+                "representative_texts": [
+                    "Nijanga cheppalante, Internship drive ki eligible branches list release ayyindhi. Idhi naa opinion.",
+                    "Final ga cheppalante, Internship drive ki eligible branches list release ayyindhi. Idhi naa opinion.",
+                    "Honestly, Internship drive ki eligible branches list release ayyindhi. Idhi naa opinion."
+                ]
+            },
+            "14": {
+                "group_id": 14,
+                "generated_description": "anthe overall · kosam · api access · inkaa konchem · lo api",
+                "top_terms": [
+                    "anthe overall",
+                    "kosam",
+                    "api access",
+                    "inkaa konchem",
+                    "lo api",
+                    "inkaa better",
+                    "kosham account",
+                    "inkaa"
+                ],
+                "record_count": 58,
+                "mean_cosine_cohesion": 0.969,
+                "representative_record_indices": [
+                    2747,
+                    409,
+                    3603
+                ],
+                "representative_texts": [
+                    "Na opinion lo, API access kosam account create cheyali. Let's see.",
+                    "API access kosam account create cheyyali. Inka konchem improve cheyyalee.",
+                    "Honestly, API access kosam account create cheyyali. Let's see."
+                ]
+            },
+            "15": {
+                "group_id": 15,
+                "generated_description": "opinion honestly · opinion nijanga · cheyali fans · opinion simple · opinion enti",
+                "top_terms": [
+                    "opinion honestly",
+                    "opinion nijanga",
+                    "cheyali fans",
+                    "opinion simple",
+                    "opinion enti",
+                    "opinion placement",
+                    "opinion",
+                    "cheyyalee placement"
+                ],
+                "record_count": 55,
+                "mean_cosine_cohesion": 0.9653,
+                "representative_record_indices": [
+                    2989,
+                    963,
+                    2305
+                ],
+                "representative_texts": [
+                    "Final ga cheppalante, Placement registration kosam form fill cheyyali. Idhi naa opinion.",
+                    "Na opinion lo, Placement registration kosam form fill cheyyali. Inka konchem improve cheyyali.",
+                    "Placement registration kosam form fill cheyyali."
+                ]
+            },
+            "16": {
+                "group_id": 16,
+                "generated_description": "koodaa excellent · kuda excellent · miss ayindi · opinion fielding · miss",
+                "top_terms": [
+                    "koodaa excellent",
+                    "kuda excellent",
+                    "miss ayindi",
+                    "opinion fielding",
+                    "miss",
+                    "manchhi",
+                    "manchi",
+                    "manchhi chance"
+                ],
+                "record_count": 62,
+                "mean_cosine_cohesion": 0.9557,
+                "representative_record_indices": [
+                    4266,
+                    2350,
+                    6746
+                ],
+                "representative_texts": [
+                    "Nijanga cheppalante, Fielding kuda excellent, chances anni use chesukunnaru. Idhi naa opinion.",
+                    "Nijanga cheppalante, Fielding kuda excellent, chances anni use chesukunnaru. Idhi naa opinion.",
+                    "Na opinion lo, Fielding kuda excellent, chances anni use chesukunnaru. People ki useful avvali anthe."
+                ]
+            },
+            "17": {
+                "group_id": 17,
+                "generated_description": "personally requirements · page lo · requirements · official page · anipinchindhi enti",
+                "top_terms": [
+                    "personally requirements",
+                    "page lo",
+                    "requirements",
+                    "official page",
+                    "anipinchindhi enti",
+                    "mandi discuss",
+                    "overall ga",
+                    "overall"
+                ],
+                "record_count": 60,
+                "mean_cosine_cohesion": 0.9665,
+                "representative_record_indices": [
+                    4628,
+                    3049,
+                    2132
+                ],
+                "representative_texts": [
+                    "Honestly, System requirements gurinchi official page lo details unnayi. Idhi naa opinion.",
+                    "Nijanga cheppalante, System requirements gurinchi official page lo details unnayi. Let's see.",
+                    "System requirements gurinchi official page lo details unnayi."
+                ]
+            },
+            "18": {
+                "group_id": 18,
+                "generated_description": "ga basic · koodaa work · lo rendu · avuthundo basic · let's na",
+                "top_terms": [
+                    "ga basic",
+                    "koodaa work",
+                    "lo rendu",
+                    "avuthundo basic",
+                    "let's na",
+                    "let's chusthe",
+                    "anthe playing",
+                    "avvatledu final"
+                ],
+                "record_count": 91,
+                "mean_cosine_cohesion": 0.944,
+                "representative_record_indices": [
+                    4805,
+                    6720,
+                    155
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Playing eleven lo rendu changes chesaru. People ki useful avvali anthe.",
+                    "Final ga cheppalante, Playing eleven lo rendu changes chesaru. Let's see.",
+                    "Na opinion lo, Playing eleven lo rendu changes chesaru. Inka konchem improve cheyyalee."
+                ]
+            },
+            "19": {
+                "group_id": 19,
+                "generated_description": "lead role · update vachindi · update · opinion honestly · opinion na",
+                "top_terms": [
+                    "lead role",
+                    "update vachindi",
+                    "update",
+                    "opinion honestly",
+                    "opinion na",
+                    "untundi simple",
+                    "untundi chusthe",
+                    "untundi honestly"
+                ],
+                "record_count": 63,
+                "mean_cosine_cohesion": 0.9731,
+                "representative_record_indices": [
+                    6664,
+                    6506,
+                    6818
+                ],
+                "representative_texts": [
+                    "Ee film lo lead role evaru chesthunnaro official update vachindi.",
+                    "Over all ga, Ee film lo lead role evaru chesthunnaro official update vachindi. Idhi naa opinion.",
+                    "Na opinion lo, Ee film lo lead role evaru chesthunnaro official update vachindi."
+                ]
+            },
+            "20": {
+                "group_id": 20,
+                "generated_description": "anthe box · opinion box · office numbers · numbers days · numbers",
+                "top_terms": [
+                    "anthe box",
+                    "opinion box",
+                    "office numbers",
+                    "numbers days",
+                    "numbers",
+                    "office",
+                    "opinion ga",
+                    "opinion honestly"
+                ],
+                "record_count": 46,
+                "mean_cosine_cohesion": 0.9641,
+                "representative_record_indices": [
+                    6269,
+                    6447,
+                    3045
+                ],
+                "representative_texts": [
+                    "Personally, Box office numbers next few days lo telusthayi. People ki useful avvali anthe.",
+                    "Personally, Box office numbers next few days lo telusthayi.",
+                    "Personally, Box office numbers next few days lo telusthayi."
+                ]
+            },
+            "21": {
+                "group_id": 21,
+                "generated_description": "ayyaru idhi · local representatives · meeting ki · meeting · naaku",
+                "top_terms": [
+                    "ayyaru idhi",
+                    "local representatives",
+                    "meeting ki",
+                    "meeting",
+                    "naaku",
+                    "naaku anipinchindhi",
+                    "mee",
+                    "mee opinion"
+                ],
+                "record_count": 57,
+                "mean_cosine_cohesion": 0.9629,
+                "representative_record_indices": [
+                    1109,
+                    1698,
+                    5045
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Local representatives meeting ki attend ayyaru.",
+                    "Na opinion lo, Local representatives meeting ki attend ayyaru. Idhi naa opinion.",
+                    "Nijanga cheppalante, Local representatives meeting ki attend ayyaru. Idhi naa opinion."
+                ]
+            },
+            "22": {
+                "group_id": 22,
+                "generated_description": "easy ga · avuthundo simple · lo interface · kuda easy · opinion interface",
+                "top_terms": [
+                    "easy ga",
+                    "avuthundo simple",
+                    "lo interface",
+                    "kuda easy",
+                    "opinion interface",
+                    "lo extend",
+                    "cheyali",
+                    "easy"
+                ],
+                "record_count": 70,
+                "mean_cosine_cohesion": 0.9557,
+                "representative_record_indices": [
+                    5135,
+                    816,
+                    7052
+                ],
+                "representative_texts": [
+                    "Interface simple ga undhi, beginners kuda easy ga use cheyochu. Let's see.",
+                    "Interface simple ga undi, beginners kuda easy ga use cheyochu. Idhi naa opinion.",
+                    "Overall ga, Interface simple ga undi, beginners koodaa easy ga use cheyochu. Idhi naa opinion."
+                ]
+            },
+            "23": {
+                "group_id": 23,
+                "generated_description": "undhi na · undi honestly · undhi inka · undhi mee · undatam valle",
+                "top_terms": [
+                    "undhi na",
+                    "undi honestly",
+                    "undhi inka",
+                    "undhi mee",
+                    "undatam valle",
+                    "undi inkaa",
+                    "undhi fans",
+                    "undhi people"
+                ],
+                "record_count": 58,
+                "mean_cosine_cohesion": 0.9698,
+                "representative_record_indices": [
+                    2546,
+                    4954,
+                    5153
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Rain forecast undatam valla match meeda uncertainty undhi.",
+                    "Na opinion lo, Rain forecast undatam valla match meeda uncertainty undi. Idhi naa opinion.",
+                    "Rain forecast undatam valla match meeda uncertainty undi. Idhi naa opinion."
+                ]
+            },
+            "24": {
+                "group_id": 24,
+                "generated_description": "ott release · ott · personally ott · opinion ott · let's naaku",
+                "top_terms": [
+                    "ott release",
+                    "ott",
+                    "personally ott",
+                    "opinion ott",
+                    "let's naaku",
+                    "raledu chuddam",
+                    "naaku anipinchindhi",
+                    "raledu chusthe"
+                ],
+                "record_count": 57,
+                "mean_cosine_cohesion": 0.9704,
+                "representative_record_indices": [
+                    3675,
+                    4499,
+                    351
+                ],
+                "representative_texts": [
+                    "Honestly, OTT release date gurinchi inka clarity raledu. Let's see.",
+                    "Personally, OTT release date gurinchi inka clarity raledu. Let's see.",
+                    "OTT release date gurinchi inkaa clarity raledu. Let's see."
+                ]
+            },
+            "25": {
+                "group_id": 25,
+                "generated_description": "ichesaru overall · anipinchindhi enti · avuthundo middle · important na · ledhu easy",
+                "top_terms": [
+                    "ichesaru overall",
+                    "anipinchindhi enti",
+                    "avuthundo middle",
+                    "important na",
+                    "ledhu easy",
+                    "important idhi",
+                    "important bowling",
+                    "avuthundo bowling"
+                ],
+                "record_count": 91,
+                "mean_cosine_cohesion": 0.9465,
+                "representative_record_indices": [
+                    2799,
+                    4369,
+                    4577
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Bowling unit last overs lo match ni turn chesindi. People ki useful avvali anthe.",
+                    "Na opinion lo, Bowling unit last overs lo match ni turn chesindi. Inkaa konchem improve cheyyali.",
+                    "Final ga cheppalante, Bowling unit last overs lo match ni turn chesindi! Idhi naa opinion!"
+                ]
+            },
+            "26": {
+                "group_id": 26,
+                "generated_description": "opinion developer · opinion honestly · avuthundo developer · anipinchindhi enti · inkaa better",
+                "top_terms": [
+                    "opinion developer",
+                    "opinion honestly",
+                    "avuthundo developer",
+                    "anipinchindhi enti",
+                    "inkaa better",
+                    "personally developer",
+                    "ayindi final",
+                    "opinion enti"
+                ],
+                "record_count": 62,
+                "mean_cosine_cohesion": 0.9679,
+                "representative_record_indices": [
+                    4379,
+                    2667,
+                    3687
+                ],
+                "representative_texts": [
+                    "Nijanga cheppalante, Developer documentation website lo update ayyindhi.",
+                    "Developer documentation website lo update ayyindi. Idhi naa opinion.",
+                    "Developer documentation website lo update ayindi."
+                ]
+            },
+            "27": {
+                "group_id": 27,
+                "generated_description": "opinion new · ga new · list chesaru · anthe idhi · new",
+                "top_terms": [
+                    "opinion new",
+                    "ga new",
+                    "list chesaru",
+                    "anthe idhi",
+                    "new",
+                    "opinion final",
+                    "opinion idhi",
+                    "opinion nijanga"
+                ],
+                "record_count": 69,
+                "mean_cosine_cohesion": 0.9719,
+                "representative_record_indices": [
+                    3093,
+                    828,
+                    7134
+                ],
+                "representative_texts": [
+                    "Honestly, New version release ayindi, changelog lo features list chesaru. Idhi naa opinion.",
+                    "New version release ayyindi, changelog lo features list chesaru. Idhi naa opinion.",
+                    "New version release ayyindi, changelog lo features list chesaru. Let's see."
+                ]
+            },
+            "28": {
+                "group_id": 28,
+                "generated_description": "publish chesaaru · training · publish chesaru · training kosam · publish",
+                "top_terms": [
+                    "publish chesaaru",
+                    "training",
+                    "publish chesaru",
+                    "training kosam",
+                    "publish",
+                    "time inkaa",
+                    "training kosham",
+                    "improve"
+                ],
+                "record_count": 53,
+                "mean_cosine_cohesion": 0.9695,
+                "representative_record_indices": [
+                    2014,
+                    1099,
+                    2165
+                ],
+                "representative_texts": [
+                    "Final ga cheppalante, AI model training kosam new dataset publish chesaru. Let's see.",
+                    "Na opinion lo, AI model training kosam new dataset publish chesaru. Let's see.",
+                    "AI model training kosam new dataset publish chesaru. Idhi naa opinion."
+                ]
+            },
+            "29": {
+                "group_id": 29,
+                "generated_description": "honestly propositiveal · lo propositiveal · anthe chusthe · let's na · let's idhi",
+                "top_terms": [
+                    "honestly propositiveal",
+                    "lo propositiveal",
+                    "anthe chusthe",
+                    "let's na",
+                    "let's idhi",
+                    "ayindi propositiveal",
+                    "let's honestly",
+                    "konchem improve"
+                ],
+                "record_count": 72,
+                "mean_cosine_cohesion": 0.9629,
+                "representative_record_indices": [
+                    2013,
+                    6954,
+                    4832
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Propositiveal details website lo publish chestharu. Inka konchem improve cheyyali.",
+                    "Na opinion lo, Propositiveal details website lo publish chestharu.",
+                    "Personally, Propositiveal details website lo publish chestharu. Idhi naa opinion."
+                ]
+            },
+            "30": {
+                "group_id": 30,
+                "generated_description": "opinion technology · let's naaku · opinion na · opinion simple · avuthundo technology",
+                "top_terms": [
+                    "opinion technology",
+                    "let's naaku",
+                    "opinion na",
+                    "opinion simple",
+                    "avuthundo technology",
+                    "avuthundo naku",
+                    "overall ga",
+                    "personally"
+                ],
+                "record_count": 76,
+                "mean_cosine_cohesion": 0.9665,
+                "representative_record_indices": [
+                    1902,
+                    2777,
+                    2635
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Technology conference next month conduct chestharu. Let's see.",
+                    "Personally, Technology conference next month conduct chestharu. Let's see.",
+                    "Final ga cheppalante, Technology conference next month conduct chestharu. Let's see."
+                ]
+            },
+            "31": {
+                "group_id": 31,
+                "generated_description": "nadusthondi · nadusthondi honestly · nadusthondi hope · nadusthondi let's · lo director",
+                "top_terms": [
+                    "nadusthondi",
+                    "nadusthondi honestly",
+                    "nadusthondi hope",
+                    "nadusthondi let's",
+                    "lo director",
+                    "nadusthondi inka",
+                    "nadusthondi idhi",
+                    "nadusthondi ga"
+                ],
+                "record_count": 72,
+                "mean_cosine_cohesion": 0.9691,
+                "representative_record_indices": [
+                    2331,
+                    2808,
+                    609
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Director next project gurinchi kuda discussion nadusthondi.",
+                    "Final ga cheppalante, Director next project gurinchi kuda discussion nadusthondi.",
+                    "Director next project gurinchi koodaa discussion nadusthondi. Let's see."
+                ]
+            },
+            "32": {
+                "group_id": 32,
+                "generated_description": "meeting taruvatha · meeting tharvatha · meeting tarvatha · opinion final · opinion idhi",
+                "top_terms": [
+                    "meeting taruvatha",
+                    "meeting tharvatha",
+                    "meeting tarvatha",
+                    "opinion final",
+                    "opinion idhi",
+                    "opinion chusthe",
+                    "tharvatha steps",
+                    "cheppalante meeting"
+                ],
+                "record_count": 57,
+                "mean_cosine_cohesion": 0.9725,
+                "representative_record_indices": [
+                    5335,
+                    1493,
+                    6289
+                ],
+                "representative_texts": [
+                    "Honestly, Meeting tharvatha next steps announce chesthamani leaders chepparu. Idhi naa opinion.",
+                    "Final ga cheppalante, Meeting tharvatha next steps announce chesthamani leaders chepparu. Let's see.",
+                    "Chusthe, Meeting taruvatha next steps announce chesthamani leaders chepparu. Let's see."
+                ]
+            },
+            "33": {
+                "group_id": 33,
+                "generated_description": "tomorrow class · timetable prakaram · tomorrow · timetable · enti honestly",
+                "top_terms": [
+                    "tomorrow class",
+                    "timetable prakaram",
+                    "tomorrow",
+                    "timetable",
+                    "enti honestly",
+                    "time inkaa",
+                    "simple",
+                    "simple ga"
+                ],
+                "record_count": 61,
+                "mean_cosine_cohesion": 0.9648,
+                "representative_record_indices": [
+                    4043,
+                    968,
+                    4948
+                ],
+                "representative_texts": [
+                    "Personally, Tomorrow class regular timetable prakaram untundi. Idhi naa opinion.",
+                    "Final ga cheppalante, Tomorrow class regular timetable prakaram untundi. Idhi naa opinion.",
+                    "Nijanga cheppalante, Tomorrow class regular timetable prakaram untundi. Idhi naa opinion."
+                ]
+            },
+            "34": {
+                "group_id": 34,
+                "generated_description": "20 క్రికెట్ · positiveitions · positiveitions marayi · table · chesthunnaru points",
+                "top_terms": [
+                    "20 క్రికెట్",
+                    "positiveitions",
+                    "positiveitions marayi",
+                    "table",
+                    "chesthunnaru points",
+                    "naku anipinchindhi",
+                    "naku",
+                    "points table"
+                ],
+                "record_count": 53,
+                "mean_cosine_cohesion": 0.9642,
+                "representative_record_indices": [
+                    5253,
+                    1759,
+                    1091
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Points table lo teams positiveitions marayi. Idhi naa opinion.",
+                    "Points table lo teams positiveitions marayi. Idhi naa opinion.",
+                    "Personally, Points table lo teams positiveitions marayi. Idhi naa opinion."
+                ]
+            },
+            "35": {
+                "group_id": 35,
+                "generated_description": "important press · personally press · opinion ga · opinion final · opinion idhi",
+                "top_terms": [
+                    "important press",
+                    "personally press",
+                    "opinion ga",
+                    "opinion final",
+                    "opinion idhi",
+                    "opinion simple",
+                    "press conference",
+                    "opinion enti"
+                ],
+                "record_count": 59,
+                "mean_cosine_cohesion": 0.9692,
+                "representative_record_indices": [
+                    4994,
+                    3450,
+                    4378
+                ],
+                "representative_texts": [
+                    "Press conference evening conduct chesthamani announce chesaaru.",
+                    "Idhi chaala mandi discuss chesthunnaru. Press conference evening conduct chesthamani announce chesaaru.",
+                    "Press conference evening conduct chesthamani announce chesaru."
+                ]
+            },
+            "36": {
+                "group_id": 36,
+                "generated_description": "improvement let's · cheyyalem · improvement personally · lo automation · improvement honestly",
+                "top_terms": [
+                    "improvement let's",
+                    "cheyyalem",
+                    "improvement personally",
+                    "lo automation",
+                    "improvement honestly",
+                    "improvement chuddam",
+                    "improvement nijanga",
+                    "improvement overall"
+                ],
+                "record_count": 47,
+                "mean_cosine_cohesion": 0.9582,
+                "representative_record_indices": [
+                    5954,
+                    421,
+                    6088
+                ],
+                "representative_texts": [
+                    "Final ga cheppalante, Automation valla time save avuthundi, good improvement.",
+                    "Overall ga, Automation result ni verify cheyyakunda trust cheyyalem. Inka konchem improve cheyyalee.",
+                    "Nijanga cheppalante, Automation result ni verify cheyyakunda trust cheyyalem. Inkaa konchem improve cheyali."
+                ]
+            },
+            "37": {
+                "group_id": 37,
+                "generated_description": "improve ayindi · avuthondi chusthe · let's update · important naku · avuthondi",
+                "top_terms": [
+                    "improve ayindi",
+                    "avuthondi chusthe",
+                    "let's update",
+                    "important naku",
+                    "avuthondi",
+                    "naku",
+                    "opinion honestly",
+                    "mandi discuss"
+                ],
+                "record_count": 60,
+                "mean_cosine_cohesion": 0.9668,
+                "representative_record_indices": [
+                    3684,
+                    4245,
+                    2242
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Update tarvatha performance improve ayyindi, smooth ga run avuthondi. Let's see.",
+                    "Update tarvatha performance improve ayyindhi, smooth ga run avuthondi.",
+                    "Final ga cheppalante, Update tarvatha performance improve ayindi, smooth ga run avuthondi. Let's see."
+                ]
+            },
+            "38": {
+                "group_id": 38,
+                "generated_description": "project review · opinion project · review · personally project · project",
+                "top_terms": [
+                    "project review",
+                    "opinion project",
+                    "review",
+                    "personally project",
+                    "project",
+                    "cheppalante project",
+                    "improve cheyyalee",
+                    "review schedule"
+                ],
+                "record_count": 62,
+                "mean_cosine_cohesion": 0.9671,
+                "representative_record_indices": [
+                    3790,
+                    3921,
+                    4398
+                ],
+                "representative_texts": [
+                    "Project review schedule department announce chesindi. Idhi naa opinion.",
+                    "Personally, Project review schedule department announce chesindi. Idhi naa opinion.",
+                    "Project review schedule department announce chesindi. Let's see."
+                ]
+            },
+            "39": {
+                "group_id": 39,
+                "generated_description": "lo semester · personally semester · let's semester · personally library · semester exam",
+                "top_terms": [
+                    "lo semester",
+                    "personally semester",
+                    "let's semester",
+                    "personally library",
+                    "semester exam",
+                    "semester",
+                    "time lo",
+                    "timetable"
+                ],
+                "record_count": 66,
+                "mean_cosine_cohesion": 0.9635,
+                "representative_record_indices": [
+                    6858,
+                    3860,
+                    6446
+                ],
+                "representative_texts": [
+                    "Semester exam timetable university website lo upload chesaru.",
+                    "Personally, Semester exam timetable university website lo upload chesaaru. Idhi naa opinion.",
+                    "Semester exam timetable university website lo upload chesaru. Let's see."
+                ]
+            },
+            "40": {
+                "group_id": 40,
+                "generated_description": "maatladadu hope · maatladadu honestly · maatladadu post · maatladadu chusthe · match presentation",
+                "top_terms": [
+                    "maatladadu hope",
+                    "maatladadu honestly",
+                    "maatladadu post",
+                    "maatladadu chusthe",
+                    "match presentation",
+                    "maatladadu final",
+                    "maatladadu ga",
+                    "match"
+                ],
+                "record_count": 66,
+                "mean_cosine_cohesion": 0.9669,
+                "representative_record_indices": [
+                    5400,
+                    5203,
+                    934
+                ],
+                "representative_texts": [
+                    "Honestly, Post-match presentation lo captain maatladadu. Idhi naa opinion.",
+                    "Idhi chaala mandi discuss chesthunnaru. Post-match presentation lo captain maatladadu.",
+                    "Idhi chaala mandi discuss chesthunnaru. Post-match presentation lo captain maatladadu."
+                ]
+            },
+            "41": {
+                "group_id": 41,
+                "generated_description": "chesthunnaru captaincy · anipinchindi chusthe · lo captaincy · anipinchindi let's · personally captaincy",
+                "top_terms": [
+                    "chesthunnaru captaincy",
+                    "anipinchindi chusthe",
+                    "lo captaincy",
+                    "anipinchindi let's",
+                    "personally captaincy",
+                    "mandi discuss",
+                    "let's overall",
+                    "naku anipinchindhi"
+                ],
+                "record_count": 46,
+                "mean_cosine_cohesion": 0.9584,
+                "representative_record_indices": [
+                    6243,
+                    1084,
+                    4081
+                ],
+                "representative_texts": [
+                    "Nijanga cheppalante, Captaincy decisions correct time lo teesukunnadu. Let's see.",
+                    "Nijanga cheppalante, Captaincy decisions correct time lo teesukunnadu.",
+                    "Nijanga cheppalante, Captaincy decisions correct time lo teesukunnadu. Idhi naa opinion."
+                ]
+            },
+            "42": {
+                "group_id": 42,
+                "generated_description": "price availability · price · anthe new · important chusthe · new device",
+                "top_terms": [
+                    "price availability",
+                    "price",
+                    "anthe new",
+                    "important chusthe",
+                    "new device",
+                    "time inkaa",
+                    "personally new",
+                    "naaku"
+                ],
+                "record_count": 63,
+                "mean_cosine_cohesion": 0.9663,
+                "representative_record_indices": [
+                    6155,
+                    3198,
+                    2152
+                ],
+                "representative_texts": [
+                    "Overall ga, New device price and availability details announce chesaru. Idhi naa opinion.",
+                    "New device price and availability details announce chesaru. Idhi naa opinion.",
+                    "New device price and availability details announce chesaru. Idhi naa opinion."
+                ]
+            },
+            "43": {
+                "group_id": 43,
+                "generated_description": "official ga · official · opinion final · better ga · overall ga",
+                "top_terms": [
+                    "official ga",
+                    "official",
+                    "opinion final",
+                    "better ga",
+                    "overall ga",
+                    "idi important",
+                    "overall",
+                    "personally"
+                ],
+                "record_count": 54,
+                "mean_cosine_cohesion": 0.9623,
+                "representative_record_indices": [
+                    5477,
+                    2035,
+                    1774
+                ],
+                "representative_texts": [
+                    "Cast and crew details official ga announce chesaru. Let's see.",
+                    "Final ga cheppalante, Cast and crew details official ga announce chesaru. Let's see.",
+                    "Cast and crew details official ga announce chesaru. Idhi naa opinion."
+                ]
+            },
+            "44": {
+                "group_id": 44,
+                "generated_description": "registration link · personally workshop · share chesaaru · share · registration",
+                "top_terms": [
+                    "registration link",
+                    "personally workshop",
+                    "share chesaaru",
+                    "share",
+                    "registration",
+                    "important personally",
+                    "important simple",
+                    "important workshop"
+                ],
+                "record_count": 68,
+                "mean_cosine_cohesion": 0.9633,
+                "representative_record_indices": [
+                    4981,
+                    3641,
+                    4366
+                ],
+                "representative_texts": [
+                    "Honestly, Workshop registration link department group lo share chesaru. Idhi naa opinion.",
+                    "Workshop registration link department group lo share chesaru. Idhi naa opinion.",
+                    "Workshop registration link department group lo share chesaru. Let's see."
+                ]
+            },
+            "45": {
+                "group_id": 45,
+                "generated_description": "repositiveitory ki · repositiveitory · push chesaru · push chesaaru · push",
+                "top_terms": [
+                    "repositiveitory ki",
+                    "repositiveitory",
+                    "push chesaru",
+                    "push chesaaru",
+                    "push",
+                    "project repositiveitory",
+                    "chesaaru inka",
+                    "project"
+                ],
+                "record_count": 51,
+                "mean_cosine_cohesion": 0.9704,
+                "representative_record_indices": [
+                    1164,
+                    1862,
+                    3247
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Project repositiveitory ki latest commit push chesaru. Let's see.",
+                    "Project repositiveitory ki latest commit push chesaru.",
+                    "Personally, Project repositiveitory ki latest commit push chesaru. Let's see."
+                ]
+            },
+            "46": {
+                "group_id": 46,
+                "generated_description": "personally committee · report · report submit · opinion na · opinion idhi",
+                "top_terms": [
+                    "personally committee",
+                    "report",
+                    "report submit",
+                    "opinion na",
+                    "opinion idhi",
+                    "opinion nijanga",
+                    "submit",
+                    "important honestly"
+                ],
+                "record_count": 68,
+                "mean_cosine_cohesion": 0.9724,
+                "representative_record_indices": [
+                    1191,
+                    3737,
+                    4679
+                ],
+                "representative_texts": [
+                    "Final ga cheppalante, Committee report submit cheyyadaniki deadline fix chesaru. Idhi naa opinion.",
+                    "Na opinion lo, Committee report submit cheyyadaniki deadline fix chesaru. Idhi naa opinion.",
+                    "Committee report submit cheyyadaniki deadline fix chesaru. Idhi naa opinion."
+                ]
+            },
+            "47": {
+                "group_id": 47,
+                "generated_description": "personally match · schedule announce · schedule · opinion honestly · match",
+                "top_terms": [
+                    "personally match",
+                    "schedule announce",
+                    "schedule",
+                    "opinion honestly",
+                    "match",
+                    "opinion nijanga",
+                    "opinion match",
+                    "match schedule"
+                ],
+                "record_count": 57,
+                "mean_cosine_cohesion": 0.972,
+                "representative_record_indices": [
+                    1754,
+                    2801,
+                    2743
+                ],
+                "representative_texts": [
+                    "Overall ga, Next match schedule announce chesaru, venue details kuda vachayi. Idhi naa opinion.",
+                    "Honestly, Next match schedule announce chesaaru, venue details kuda vachayi.",
+                    "Next match schedule announce chesaru, venue details kuda vachayi. Idhi naa opinion."
+                ]
+            },
+            "48": {
+                "group_id": 48,
+                "generated_description": "untundi match · chesaru hope · untundi naaku · update · untundi na",
+                "top_terms": [
+                    "untundi match",
+                    "chesaru hope",
+                    "untundi naaku",
+                    "update",
+                    "untundi na",
+                    "opinion simple",
+                    "untundi chusthe",
+                    "personally match"
+                ],
+                "record_count": 48,
+                "mean_cosine_cohesion": 0.9637,
+                "representative_record_indices": [
+                    3725,
+                    5668,
+                    4165
+                ],
+                "representative_texts": [
+                    "Match start time and broadcast details update chesaaru. Let's see.",
+                    "Simple ga cheppalante, Match start time and broadcast details update chesaru.",
+                    "Simple ga cheppalante, Match start time and broadcast details update chesaru."
+                ]
+            },
+            "49": {
+                "group_id": 49,
+                "generated_description": "kaani final · chudali idhi · ga disappoint · ga movie · cinema ki",
+                "top_terms": [
+                    "kaani final",
+                    "chudali idhi",
+                    "ga disappoint",
+                    "ga movie",
+                    "cinema ki",
+                    "ela",
+                    "kaani",
+                    "ga trailer"
+                ],
+                "record_count": 145,
+                "mean_cosine_cohesion": 0.95,
+                "representative_record_indices": [
+                    5754,
+                    3519,
+                    3543
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Trailer release ayyaka audience response ela untundo chudali. Idhi naa opinion.",
+                    "Nijanga cheppalante, Trailer release ayyaka audience response ela untundo chudali. Idhi naa opinion.",
+                    "Trailer release ayyaka audience response ela untundo chudali. Idhi naa opinion."
+                ]
+            },
+            "50": {
+                "group_id": 50,
+                "generated_description": "100 win · peruguthundi fans · opinion team · roju · let's team",
+                "top_terms": [
+                    "100 win",
+                    "peruguthundi fans",
+                    "opinion team",
+                    "roju",
+                    "let's team",
+                    "questions ravatam",
+                    "ravatam",
+                    "penchuthundi chusthe"
+                ],
+                "record_count": 90,
+                "mean_cosine_cohesion": 0.9454,
+                "representative_record_indices": [
+                    3308,
+                    7034,
+                    5615
+                ],
+                "representative_texts": [
+                    "Nijanga cheppalante, Ee win team confidence ni definitely penchuthundi. Idhi naa opinion.",
+                    "Final ga cheppalante, Ee win team confidence ni definitely penchuthundi. Idhi naa opinion.",
+                    "Overall ga, Team ee roju super ga aadindi, complete team effort. Idhi naa opinion."
+                ]
+            },
+            "51": {
+                "group_id": 51,
+                "generated_description": "ledhu final · shah · second innings · sarigga ledhu · second",
+                "top_terms": [
+                    "ledhu final",
+                    "shah",
+                    "second innings",
+                    "sarigga ledhu",
+                    "second",
+                    "sarigga ledu",
+                    "cheyyali idhi",
+                    "personally second"
+                ],
+                "record_count": 69,
+                "mean_cosine_cohesion": 0.9579,
+                "representative_record_indices": [
+                    6338,
+                    2168,
+                    1302
+                ],
+                "representative_texts": [
+                    "Chusthe, Second innings lo target chase cheyyalsi untundi.",
+                    "Chusthe, Second innings lo target chase cheyyalsi untundi.",
+                    "Over all ga, Second innings lo target chase cheyyalsi untundi. Idhi naa opinion."
+                ]
+            },
+            "52": {
+                "group_id": 52,
+                "generated_description": "let's class · lo classes · lo practical · lo students · lo discussion",
+                "top_terms": [
+                    "let's class",
+                    "lo classes",
+                    "lo practical",
+                    "lo students",
+                    "lo discussion",
+                    "interesting",
+                    "avuthundo",
+                    "ni ga"
+                ],
+                "record_count": 86,
+                "mean_cosine_cohesion": 0.9474,
+                "representative_record_indices": [
+                    5851,
+                    1094,
+                    2139
+                ],
+                "representative_texts": [
+                    "Nijanga cheppalante, Students feedback ni serious ga consider cheyyali. Idhi naa opinion.",
+                    "Chusthe, Students feedback ni serious ga consider cheyyali. Hope next time inkaa better ga untundi.",
+                    "Honestly, Class lo discussion interesting ga jarigindi. Idhi naa opinion."
+                ]
+            },
+            "53": {
+                "group_id": 53,
+                "generated_description": "meeda uncertainty · lo batsman · lo batsmen · ni baaga · lo pressure",
+                "top_terms": [
+                    "meeda uncertainty",
+                    "lo batsman",
+                    "lo batsmen",
+                    "ni baaga",
+                    "lo pressure",
+                    "meeda",
+                    "match",
+                    "match meeda"
+                ],
+                "record_count": 62,
+                "mean_cosine_cohesion": 0.9581,
+                "representative_record_indices": [
+                    4315,
+                    2820,
+                    3380
+                ],
+                "representative_texts": [
+                    "Overall ga, Batsman innings chaala sensible ga undi, pressure ni baga handle chesadu. Idhi naa opinion.",
+                    "Batsman innings chaala sensible ga undi, pressure ni baaga handle chesadu. Let's see.",
+                    "Batsman innings chala sensible ga undi, pressure ni baga handle chesadu."
+                ]
+            },
+            "54": {
+                "group_id": 54,
+                "generated_description": "opinion movie · movie review · opinion ga · opinion personally · opinion simple",
+                "top_terms": [
+                    "opinion movie",
+                    "movie review",
+                    "opinion ga",
+                    "opinion personally",
+                    "opinion simple",
+                    "anipisthundi overall",
+                    "chala",
+                    "anipisthundi movie"
+                ],
+                "record_count": 63,
+                "mean_cosine_cohesion": 0.9697,
+                "representative_record_indices": [
+                    5925,
+                    5031,
+                    3288
+                ],
+                "representative_texts": [
+                    "Overall ga, Movie review lu vachaka decide avvadam better anipisthundi. Idhi naa opinion.",
+                    "Overall ga, Movie review lu vachaka decide avvadam better anipisthundi. Let's see.",
+                    "Personally, Movie review lu vachaka decide avvadam better anipisthundi. Let's see."
+                ]
+            },
+            "55": {
+                "group_id": 55,
+                "generated_description": "ni finally · meeda attention · attention pettadam · meeda · ni",
+                "top_terms": [
+                    "ni finally",
+                    "meeda attention",
+                    "attention pettadam",
+                    "meeda",
+                    "ni",
+                    "opinion personally",
+                    "let's chusthe",
+                    "naku anipinchindhi"
+                ],
+                "record_count": 66,
+                "mean_cosine_cohesion": 0.9535,
+                "representative_record_indices": [
+                    1301,
+                    3959,
+                    1993
+                ],
+                "representative_texts": [
+                    "Final ga cheppalante, Local problems meeda attention pettadam good move. Let's see.",
+                    "Public issue ni finally address cheyyadam positive step. Hope next time inkaa better ga untundi.",
+                    "Public issue ni finally address cheyyadam positive step. Idhi naa opinion."
+                ]
+            },
+            "56": {
+                "group_id": 56,
+                "generated_description": "anipisthondi people · anipisthondi chuddam · avutundi chuddam · anipistondi privacy · anipistondi",
+                "top_terms": [
+                    "anipisthondi people",
+                    "anipisthondi chuddam",
+                    "avutundi chuddam",
+                    "anipistondi privacy",
+                    "anipistondi",
+                    "ledhu anipisthundhi",
+                    "ledhu anipisthondi",
+                    "important transparency"
+                ],
+                "record_count": 167,
+                "mean_cosine_cohesion": 0.9402,
+                "representative_record_indices": [
+                    5586,
+                    5893,
+                    4200
+                ],
+                "representative_texts": [
+                    "Final ga cheppalante, Transparency maintain chesthe public trust improve avuthundi. Idhi naa opinion.",
+                    "Na opinion lo, Evaluation process transparent ga ledu anipisthundhi. Inka konchem improve cheyyali.",
+                    "Na opinion lo, Evaluation process transparent ga ledu anipisthondi. People ki useful avvali anthe."
+                ]
+            },
+            "57": {
+                "group_id": 57,
+                "generated_description": "personally assembly · personally preparation · enti assembly · anthe overall · preparation",
+                "top_terms": [
+                    "personally assembly",
+                    "personally preparation",
+                    "enti assembly",
+                    "anthe overall",
+                    "preparation",
+                    "opinion overall",
+                    "opinion final",
+                    "attend ayyaru"
+                ],
+                "record_count": 88,
+                "mean_cosine_cohesion": 0.9556,
+                "representative_record_indices": [
+                    2717,
+                    6882,
+                    3686
+                ],
+                "representative_texts": [
+                    "Final ga cheppalante, Assembly session lo ee issue discuss chesaru. Let's see.",
+                    "Honestly, Assembly session lo ee issue discuss chesaru. Idhi naa opinion.",
+                    "Idhi chaala mandi discuss chesthunnaru. Assembly session lo ee issue discuss chesaaru."
+                ]
+            },
+            "58": {
+                "group_id": 58,
+                "generated_description": "ayyindi idhi · honestly study · opinion syllabus · saripovatledu idhi · saripovatledu inka",
+                "top_terms": [
+                    "ayyindi idhi",
+                    "honestly study",
+                    "opinion syllabus",
+                    "saripovatledu idhi",
+                    "saripovatledu inka",
+                    "ayyindhi",
+                    "saripovatledu fans",
+                    "saripovatledu chuddam"
+                ],
+                "record_count": 55,
+                "mean_cosine_cohesion": 0.9587,
+                "representative_record_indices": [
+                    2914,
+                    2419,
+                    678
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Study plan follow ayyaka syllabus time ki complete ayyindi. Idhi naa opinion.",
+                    "Personally, Study plan follow ayyaka syllabus time ki complete ayyindi. Idhi naa opinion.",
+                    "Study plan follow ayyaka syllabus time ki complete ayyindhi. Idhi naa opinion."
+                ]
+            },
+            "59": {
+                "group_id": 59,
+                "generated_description": "avuthundhi inka · meeda ekkuva · lo editing · mouth · kabatti word",
+                "top_terms": [
+                    "avuthundhi inka",
+                    "meeda ekkuva",
+                    "lo editing",
+                    "mouth",
+                    "kabatti word",
+                    "kanna",
+                    "publicity meeda",
+                    "publicity"
+                ],
+                "record_count": 62,
+                "mean_cosine_cohesion": 0.9513,
+                "representative_record_indices": [
+                    6218,
+                    5470,
+                    5200
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Content strong ga undi kabatti word of mouth tho baaga run avuthundi. Inkaa konchem improve cheyyali.",
+                    "Na opinion lo, Content strong ga undi kabatti word of mouth tho baaga run avuthundi.",
+                    "Honestly, Content strong ga undhi kabatti word of mouth tho baaga run avuthundi. Idhi naa opinion."
+                ]
+            },
+            "60": {
+                "group_id": 60,
+                "generated_description": "action lo · important debate · implementation · bagundi final · honestly policy",
+                "top_terms": [
+                    "action lo",
+                    "important debate",
+                    "implementation",
+                    "bagundi final",
+                    "honestly policy",
+                    "lo concepts",
+                    "lo concept",
+                    "lo debate"
+                ],
+                "record_count": 128,
+                "mean_cosine_cohesion": 0.9462,
+                "representative_record_indices": [
+                    6278,
+                    1384,
+                    6361
+                ],
+                "representative_texts": [
+                    "Nijanga cheppalante, Concepts ni simple language lo explain cheyyadam nachindi. Idhi naa opinion.",
+                    "Overall ga, Concept ni clear ga explain chesaru, implementation koodaa bagundi. Idhi naa opinion.",
+                    "Concept ni clear ga explain chesaaru, implementation kuda bagundi. Idhi naa opinion."
+                ]
+            },
+            "61": {
+                "group_id": 61,
+                "generated_description": "chesukuntaru hope · chesthunnaru na · ni election · people problems · pakkana petti",
+                "top_terms": [
+                    "chesukuntaru hope",
+                    "chesthunnaru na",
+                    "ni election",
+                    "people problems",
+                    "pakkana petti",
+                    "pakkana",
+                    "opinion people",
+                    "opinion public"
+                ],
+                "record_count": 42,
+                "mean_cosine_cohesion": 0.959,
+                "representative_record_indices": [
+                    981,
+                    3107,
+                    6953
+                ],
+                "representative_texts": [
+                    "Na opinion lo, People problems ni election time lone gurthu chesukuntaru. Idhi naa opinion.",
+                    "Honestly, People problems ni election time lone gurthu chesukuntaru. Idhi naa opinion.",
+                    "Personally, People problems ni election time lone gurthu chesukuntaru. Idhi naa opinion."
+                ]
+            },
+            "62": {
+                "group_id": 62,
+                "generated_description": "ayindi inkaa · opinion series · series ni · realy · personally powerplay",
+                "top_terms": [
+                    "ayindi inkaa",
+                    "opinion series",
+                    "series ni",
+                    "realy",
+                    "personally powerplay",
+                    "sign",
+                    "series lo",
+                    "personally series"
+                ],
+                "record_count": 82,
+                "mean_cosine_cohesion": 0.9492,
+                "representative_record_indices": [
+                    1393,
+                    6970,
+                    5432
+                ],
+                "representative_texts": [
+                    "Overall ga, Powerplay lo vachina start match ki base ayyindi. Idhi naa opinion.",
+                    "Nijanga cheppalante, Series lo inkaa moodu matches migili unnayi. Let's see.",
+                    "Over all ga, Powerplay lo vachina start match ki base ayindi. Let's see."
+                ]
+            },
+            "63": {
+                "group_id": 63,
+                "generated_description": "perigayi mee · perigayi people · perigayi na · opinion ee · perigayi",
+                "top_terms": [
+                    "perigayi mee",
+                    "perigayi people",
+                    "perigayi na",
+                    "opinion ee",
+                    "perigayi",
+                    "perigayi chuddam",
+                    "opinion personally",
+                    "opinion chusthe"
+                ],
+                "record_count": 62,
+                "mean_cosine_cohesion": 0.9608,
+                "representative_record_indices": [
+                    2924,
+                    2827,
+                    6866
+                ],
+                "representative_texts": [
+                    "Honestly, Ee explanation valla topic finally clear ayyindi, thanks. Idhi naa opinion.",
+                    "Final ga cheppalante, Ee explanation valla topic finally clear ayindi, thanks. Idhi naa opinion.",
+                    "Na opinion lo, Ee explanation valla topic finally clear ayindi, thanks. Let's see."
+                ]
+            },
+            "64": {
+                "group_id": 64,
+                "generated_description": "ee matter · ee notes · arguments · kastam inka · parties ee",
+                "top_terms": [
+                    "ee matter",
+                    "ee notes",
+                    "arguments",
+                    "kastam inka",
+                    "parties ee",
+                    "anthe ee",
+                    "personally ee",
+                    "avuthundo chusthe"
+                ],
+                "record_count": 100,
+                "mean_cosine_cohesion": 0.9541,
+                "representative_record_indices": [
+                    2994,
+                    5313,
+                    836
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Ee matter meeda official clarification kosam wait chesthunnaru. Idhi naa opinion.",
+                    "Nijanga cheppalante, Ee matter meeda official clarification kosam wait chesthunnaru. Let's see.",
+                    "Ee matter meeda official clarification kosam wait chesthunnaru. Let's see."
+                ]
+            },
+            "65": {
+                "group_id": 65,
+                "generated_description": "ki ibbandi · ibbandi avuthundi · let's ga · avutundi inka · avuthundi people",
+                "top_terms": [
+                    "ki ibbandi",
+                    "ibbandi avuthundi",
+                    "let's ga",
+                    "avutundi inka",
+                    "avuthundi people",
+                    "let's final",
+                    "let's honestly",
+                    "meeda statements"
+                ],
+                "record_count": 67,
+                "mean_cosine_cohesion": 0.9607,
+                "representative_record_indices": [
+                    303,
+                    1323,
+                    7097
+                ],
+                "representative_texts": [
+                    "Different parties ee decision meeda statements ichayi. Idhi naa opinion.",
+                    "Na opinion lo, Different parties ee decision meeda statements ichayi. People ki useful avvali anthe.",
+                    "Na opinion lo, Different parties ee decision meeda statements ichayi."
+                ]
+            },
+            "66": {
+                "group_id": 66,
+                "generated_description": "avutundi · avuthundhi na · ayindi nijanga · personally background · personally songs",
+                "top_terms": [
+                    "avutundi",
+                    "avuthundhi na",
+                    "ayindi nijanga",
+                    "personally background",
+                    "personally songs",
+                    "mouth tho",
+                    "players performance",
+                    "mouth"
+                ],
+                "record_count": 73,
+                "mean_cosine_cohesion": 0.947,
+                "representative_record_indices": [
+                    2307,
+                    3265,
+                    2543
+                ],
+                "representative_texts": [
+                    "Idhi chaala mandi discuss chesthunnaru. Background music scenes ki perfect ga match ayindi.",
+                    "Idhi chala mandi discuss chesthunnaru. Songs baagunna screenplay lo connect miss ayyindi.",
+                    "Idhi chala mandi discuss chesthunnaru. Background music scenes ki perfect ga match ayyindi."
+                ]
+            },
+            "67": {
+                "group_id": 67,
+                "generated_description": "avuthundo story · acting · lo story · aadithe gelavadam · important story",
+                "top_terms": [
+                    "avuthundo story",
+                    "acting",
+                    "lo story",
+                    "aadithe gelavadam",
+                    "important story",
+                    "ki tagga",
+                    "avuthundo chusthe",
+                    "dorakaledu chuddam"
+                ],
+                "record_count": 164,
+                "mean_cosine_cohesion": 0.9371,
+                "representative_record_indices": [
+                    4534,
+                    3009,
+                    731
+                ],
+                "representative_texts": [
+                    "Overall ga, Ee movie chala bagundi, story nunchi acting varaku anni set ayyayi. Chuddam next em avuthundo.",
+                    "Na opinion lo, Fans expectations ki taggattu performance raledu. Chuddam next em avuthundo.",
+                    "Na opinion lo, Ee movie chala baagundi, story nunchi acting varaku anni set ayyayi. Chuddam next em avuthundo."
+                ]
+            },
+            "68": {
+                "group_id": 68,
+                "generated_description": "ground lo · ayyindhi simple · nachindi project · nachindi simple · nerchukunna na",
+                "top_terms": [
+                    "ground lo",
+                    "ayyindhi simple",
+                    "nachindi project",
+                    "nachindi simple",
+                    "nerchukunna na",
+                    "ground",
+                    "nerchukunna people",
+                    "nerchukunna simple"
+                ],
+                "record_count": 130,
+                "mean_cosine_cohesion": 0.9415,
+                "representative_record_indices": [
+                    4790,
+                    2071,
+                    4448
+                ],
+                "representative_texts": [
+                    "Personally, Project complete cheyyadam tho chala kotha things nerchukunna.",
+                    "Na opinion lo, Development gurinchi clear plan cheppadam nachindi.",
+                    "Honestly, Project complete cheyyadam tho chala kotha things nerchukunna."
+                ]
+            },
+            "69": {
+                "group_id": 69,
+                "generated_description": "chesaaru venue · avutundi good · ayyayi placement · announce chesaaru · chesina",
+                "top_terms": [
+                    "chesaaru venue",
+                    "avutundi good",
+                    "ayyayi placement",
+                    "announce chesaaru",
+                    "chesina",
+                    "details koodaa",
+                    "announce chesaru",
+                    "automation valla"
+                ],
+                "record_count": 58,
+                "mean_cosine_cohesion": 0.9545,
+                "representative_record_indices": [
+                    1295,
+                    6121,
+                    1914
+                ],
+                "representative_texts": [
+                    "Idhi chaala mandi discuss chesthunnaru. Placement updates late ga ivvadam valla confusion avuthondi.",
+                    "Idhi chala mandi discuss chesthunnaru. Assignment deadline ki time chaala takkuva icharu.",
+                    "Idhi chala mandi discuss chesthunnaru. Assignment deadline ki time chaala takkuva icharu."
+                ]
+            },
+            "70": {
+                "group_id": 70,
+                "generated_description": "let's assignment · lo assignment · let's na · appointment friday · let's chusthe",
+                "top_terms": [
+                    "let's assignment",
+                    "lo assignment",
+                    "let's na",
+                    "appointment friday",
+                    "let's chusthe",
+                    "ki undi",
+                    "konchem",
+                    "let's"
+                ],
+                "record_count": 61,
+                "mean_cosine_cohesion": 0.9609,
+                "representative_record_indices": [
+                    4547,
+                    4060,
+                    5378
+                ],
+                "representative_texts": [
+                    "Na opinion lo, Assignment submission last date Friday ani notice icharu. Idhi naa opinion.",
+                    "Na opinion lo, Assignment submission last date Friday ani notice icharu. Idhi naa opinion.",
+                    "Na opinion lo, Assignment submission last date Friday ani notice icharu. Hope next time inka better ga untundi."
+                ]
+            },
+            "71": {
+                "group_id": 71,
+                "generated_description": "8 pm · 10 ki · 9 pm · class starts · chala nachindi",
+                "top_terms": [
+                    "8 pm",
+                    "10 ki",
+                    "9 pm",
+                    "class starts",
+                    "chala nachindi",
+                    "cheyyaledu ee",
+                    "chala crowded",
+                    "chala poor"
+                ],
+                "record_count": 59,
+                "mean_cosine_cohesion": 0.904,
+                "representative_record_indices": [
+                    3082,
+                    5091,
+                    4321
+                ],
+                "representative_texts": [
+                    "Ee movie chala baagundi, story nunchi acting varaku anni set ayyayi.",
+                    "Final ga cheppalante, Ee movie chala baagundi, story nunchi acting varaku anni set ayyayi.",
+                    "Personally, Ee movie chala baagundi, story nundi acting varaku anni set ayyayi."
+                ]
+            },
+            "72": {
+                "group_id": 72,
+                "generated_description": "52 · 2 గెలుచుకున్నాయి · 4 నెల · cute గా · 424 పరుగులు",
+                "top_terms": [
+                    "52",
+                    "2 గెలుచుకున్నాయి",
+                    "4 నెల",
+                    "cute గా",
+                    "424 పరుగులు",
+                    "160",
+                    "majili",
+                    "date ఎమైనా"
+                ],
+                "record_count": 1221,
+                "mean_cosine_cohesion": 0.879,
+                "representative_record_indices": [
+                    6281,
+                    6947,
+                    2551
+                ],
+                "representative_texts": [
+                    "Syllabus chaala ekkuva undi, time matram saripovatledu.",
+                    "Naaku anipinchindhi enti ante, Syllabus chala ekkuva undhi, time matram saripovatledu.",
+                    "Naaku anipinchindhi enti ante, Syllabus chala ekkuva undi, time matram saripovatledu."
+                ]
+            }
+        }
+    },
+    "interpretation": {
+        "domain_diversity": "Described by the number of discovered semantic groups and effective group count. More groups are not automatically better; fragmentation and dataset size matter.",
+        "domain_balance": "Described by normalized entropy across discovered groups.",
+        "domain_concentration": "Described by largest-group share and Herfindahl concentration.",
+        "discovery_reliability": "Described using group cohesion, silhouette and unassigned record coverage. These are unsupervised structural indicators, not classification accuracy."
+    },
+    "limitations": [
+        "Discovered groups describe recurring semantic structure, not necessarily universal subject domains.",
+        "Automatically generated group descriptions are keyword summaries, not verified human labels.",
+        "Multilingual embeddings may perform unevenly across languages, dialects, transliteration and code-mixing.",
+        "Clustering results depend on embedding model and clustering parameters.",
+        "Unassigned records may be outliers, short texts, mixed-topic records or records not well represented by the embedding space.",
+        "Domain diversity does not establish representativeness of an intended population.",
+        "No single universal numeric quality grade is assigned by this version."
+    ]
+}

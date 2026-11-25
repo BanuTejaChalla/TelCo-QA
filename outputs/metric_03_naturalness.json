@@ -1,0 +1,168 @@
+{
+    "metric": "Code-Mix Naturalness",
+    "version": "V1",
+    "overall_score": 90.79,
+    "quality_tier": "High",
+    "total_records": 7223,
+    "evaluated_records": 7223,
+    "empty_records": 0,
+    "component_scores": {
+        "language_identification_coverage": 77.02,
+        "switching_stability": 77.17,
+        "script_compatibility": 99.99,
+        "repetition": 99.98,
+        "text_structure": 99.77
+    },
+    "component_weights": {
+        "language_identification_coverage": 0.2,
+        "switching_stability": 0.2,
+        "script_compatibility": 0.2,
+        "repetition": 0.2,
+        "text_structure": 0.2
+    },
+    "quality_tier_distribution": {
+        "High": 6898,
+        "Medium": 325,
+        "Low": 0,
+        "Not Evaluated": 0
+    },
+    "language_statistics": {
+        "identified_telugu_tokens": 42996,
+        "identified_english_tokens": 22647,
+        "unknown_tokens": 18372,
+        "ambiguous_tokens": 499
+    },
+    "top_unrecognized_words": [
+        {
+            "word": "propositiveal",
+            "frequency": 141
+        },
+        {
+            "word": "audience",
+            "frequency": 106
+        },
+        {
+            "word": "discussion",
+            "frequency": 106
+        },
+        {
+            "word": "lead",
+            "frequency": 106
+        },
+        {
+            "word": "icharu",
+            "frequency": 105
+        },
+        {
+            "word": "raledu",
+            "frequency": 105
+        },
+        {
+            "word": "tool",
+            "frequency": 105
+        },
+        {
+            "word": "matter",
+            "frequency": 97
+        },
+        {
+            "word": "documentation",
+            "frequency": 94
+        },
+        {
+            "word": "lab",
+            "frequency": 94
+        },
+        {
+            "word": "local",
+            "frequency": 92
+        },
+        {
+            "word": "confidence",
+            "frequency": 92
+        },
+        {
+            "word": "half",
+            "frequency": 91
+        },
+        {
+            "word": "internship",
+            "frequency": 90
+        },
+        {
+            "word": "avvadam",
+            "frequency": 90
+        },
+        {
+            "word": "kanna",
+            "frequency": 87
+        },
+        {
+            "word": "ayyayi",
+            "frequency": 86
+        },
+        {
+            "word": "correct",
+            "frequency": 85
+        },
+        {
+            "word": "practical",
+            "frequency": 85
+        },
+        {
+            "word": "leaders",
+            "frequency": 85
+        },
+        {
+            "word": "series",
+            "frequency": 84
+        },
+        {
+            "word": "theatre",
+            "frequency": 83
+        },
+        {
+            "word": "miss",
+            "frequency": 82
+        },
+        {
+            "word": "clarity",
+            "frequency": 82
+        },
+        {
+            "word": "overs",
+            "frequency": 81
+        },
+        {
+            "word": "library",
+            "frequency": 80
+        },
+        {
+            "word": "timings",
+            "frequency": 80
+        },
+        {
+            "word": "exams",
+            "frequency": 80
+        },
+        {
+            "word": "extend",
+            "frequency": 80
+        },
+        {
+            "word": "ila",
+            "frequency": 79
+        }
+    ],
+    "method": "Equal-weight heuristic evaluation using language identification coverage, switching stability, script compatibility, repetition and text structure.",
+    "monolingual_policy": "Monolingual Telugu and English sentences are eligible for high scores. Bilingual composition is not mandatory.",
+    "language_identification_note": "Telugu script is identified using Unicode. Romanized Telugu and English are identified using explicit word lexicons. Unknown and ambiguous words are reported separately.",
+    "limitations": [
+        "This is a heuristic evaluation, not a human-validated measure of linguistic naturalness.",
+        "Romanized Telugu and English vocabulary coverage is incomplete.",
+        "Semantic coherence and grammatical correctness are not directly evaluated.",
+        "Switching stability is a simplified indicator and does not establish whether a language switch is linguistically natural.",
+        "Script compatibility evaluates mixed-script characters within individual whitespace-delimited tokens, not language switching between words.",
+        "Component weights and quality-tier thresholds are provisional design choices."
+    ]
+}

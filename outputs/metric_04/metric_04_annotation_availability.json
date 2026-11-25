@@ -1,0 +1,22 @@
+{
+  "metric": "Metric 04 - Annotation Availability",
+  "status": "completed",
+  "reason": null,
+  "annotation_columns": [
+    "sentiment",
+    "topic"
+  ],
+  "total_records": 7223,
+  "records_with_annotations": 7223,
+  "records_without_annotations": 0,
+  "records_complete_across_detected_columns": 7223,
+  "annotation_availability_score": 100.0,
+  "annotation_availability_percent": 100.0,
+  "overall_score_inclusion": true,
+  "overall_score_exclusion_reason": null,
+  "column_completeness": {
+    "sentiment": 100.0,
+    "topic": 100.0
+  },
+  "input_file": "C:\\Users\\banut\\OneDrive\\Desktop\\Sem 7\\TelcoQA\\TelCo-QA\\data\\raw\\TelCo-QA-Dataset.xlsx"
+}

@@ -1,0 +1,77 @@
+{
+  "metric": "Metric 04 - Annotation Reliability",
+  "metric_version": "Yama-assisted V3 - prompt-refined, abstention-aware",
+  "status": "completed",
+  "model_id": "LatentAILabs/yama-indic",
+  "method": "Yama zero-shot label prediction compared with existing dataset annotations.",
+  "total_records": 7223,
+  "text_column": "text",
+  "availability": {
+    "total_records": 7223,
+    "annotation_columns": [
+      "sentiment",
+      "topic"
+    ],
+    "annotation_cells": 14446,
+    "valid_annotation_cells": 14446,
+    "records_with_annotations": 7223,
+    "availability_percent": 100.0,
+    "not_applicable": false
+  },
+  "annotation_columns": {
+    "sentiment": {
+      "valid_records_evaluated": 50,
+      "predicted_count": 49,
+      "abstained_count": 1,
+      "unparsed_count": 0,
+      "prediction_coverage_percent": 98.0,
+      "model_label_agreement_count": 40,
+      "agreement_among_predictions_percent": 81.63,
+      "coverage_adjusted_agreement_percent": 80.0,
+      "mean_probability_assigned_to_dataset_label": 0.7414,
+      "status": "completed",
+      "labels_considered": [
+        "negative",
+        "neutral",
+        "positive"
+      ]
+    },
+    "topic": {
+      "valid_records_evaluated": 50,
+      "predicted_count": 39,
+      "abstained_count": 11,
+      "unparsed_count": 0,
+      "prediction_coverage_percent": 78.0,
+      "model_label_agreement_count": 31,
+      "agreement_among_predictions_percent": 79.49,
+      "coverage_adjusted_agreement_percent": 62.0,
+      "mean_probability_assigned_to_dataset_label": 0.5335,
+      "status": "completed",
+      "labels_considered": [
+        "Cricket & Sports",
+        "Education & Students",
+        "General",
+        "Movies & Entertainment",
+        "Multiple topics",
+        "Politics & Current Affairs",
+        "Technology & AI"
+      ]
+    }
+  },
+  "annotation_cells_evaluated": 100,
+  "yama_predicted_cells": 88,
+  "yama_abstained_cells": 12,
+  "yama_unparsed_cells": 0,
+  "yama_prediction_coverage_percent": 88.0,
+  "agreement_among_nonblank_predictions_percent": 80.68,
+  "coverage_adjusted_reliability_score": 71.0,
+  "annotation_reliability_score": 71.0,
+  "mean_probability_assigned_to_provided_labels": 0.6374,
+  "sample_only": true,
+  "overall_score_inclusion": false,
+  "overall_score_exclusion_reason": "Sample-only run; exclude from final aggregation.",
+  "interpretation": "Model-based verification, not human ground truth. Prediction coverage is reported separately from agreement among predictions. The reliability score is coverage-adjusted: confirmed matches divided by all valid annotation cells. Abstained and unparsed cells remain unverified. Source labels are never changed.",
+  "limit_per_annotation_column": 50,
+  "evaluation_scope": "first 50 annotated records per column (sample run)",
+  "input_file": "C:\\Users\\banut\\OneDrive\\Desktop\\Sem 7\\TelcoQA\\TelCo-QA\\data\\raw\\TelCo-QA-Dataset.xlsx"
+}

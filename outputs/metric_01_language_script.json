@@ -1,0 +1,56 @@
+{
+    "metric": "Metric 1: Language and Script Usage",
+    "version": "V3",
+    "dataset_records": 7223,
+    "methodology": {
+        "language_distribution": "Global token-level distribution. Each token contributes equally.",
+        "script_distribution": "Token-level writing-system distribution.",
+        "record_script_profile": "Record-level Unicode writing-system profile. This does not identify bilingual language mixing when both languages use Latin script.",
+        "scoring": "Heuristic weighted composite; not human-validated.",
+        "weights": {
+            "language_identification_coverage": 0.3,
+            "script_label_consistency": 0.3,
+            "script_representation_compatibility": 0.2,
+            "unicode_character_validity": 0.2
+        }
+    },
+    "language_distribution": {
+        "telugu_token_percentage": 48.092623707314765,
+        "english_token_percentage": 28.01547672574958,
+        "ambiguous_token_percentage": 0.0,
+        "unknown_token_percentage": 23.891899566935656
+    },
+    "script_distribution": {
+        "latin_token_percentage": 85.96445559315616,
+        "telugu_script_token_percentage": 14.035544406843837,
+        "mixed_script_token_percentage": 0.0
+    },
+    "record_script_profile_distribution": {
+        "Romanized": 83.84327841617056,
+        "Telugu script": 14.23231344316766,
+        "code-mixed": 1.924408140661775,
+        "Not Evaluated": 0.0
+    },
+    "component_scores": {
+        "language_identification_coverage": 75.63417277484324,
+        "script_label_consistency": 100.0,
+        "script_representation_compatibility": 100.0,
+        "unicode_character_validity": 100.0
+    },
+    "script_label_agreement": 100.0,
+    "overall_score": 92.69025183245297,
+    "overall_quality_tier": "High",
+    "quality_tier_distribution": {
+        "High": 98.92011629516821,
+        "Medium": 1.0798837048317873,
+        "Low": 0.0
+    },
+    "interpretation_notes": [
+        "Unknown tokens are not automatically assigned a language.",
+        "Language identification coverage depends on lexicon coverage.",
+        "Script-label agreement checks writing-system labels, not linguistic correctness.",
+        "Script representation compatibility measures support for Telugu and Latin alphabetic characters.",
+        "Unicode validity is a technical character-validity check, not a measure of linguistic quality.",
+        "The quality score and thresholds are heuristic."
+    ]
+}

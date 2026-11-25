@@ -1,0 +1,29 @@
+{
+    "metric": "Metric 05 - Target-Domain Relevance Scoring",
+    "version": "PROTOTYPE-V1",
+    "generated_at_utc": "2026-11-22T19:22:14.963021+00:00",
+    "target_domain": "General",
+    "target_domain_description": "A general-purpose Telugu-English code-mixed dataset covering everyday subjects, experiences, opinions, and conversations.",
+    "similarity_model": "intfloat/multilingual-e5-base",
+    "similarity_method": "Cosine similarity of normalized multilingual E5 embeddings",
+    "classification_threshold": 0.5,
+    "threshold_status": "Provisional; requires review/calibration on sampled records",
+    "dataset": {
+        "total_records": 7223,
+        "evaluated_records": 7223,
+        "empty_text_records": 0
+    },
+    "domain_relevance": {
+        "relevant_records": 7223,
+        "not_relevant_records": 0,
+        "target_domain_coverage_score": 100.0
+    },
+    "interpretation": "The score estimates the share of records semantically relevant to the user-declared domain under the selected similarity threshold. It is an internal relevance/coverage proxy, not proof of population representativeness or complete subdomain coverage.",
+    "limitations": [
+        "The threshold is provisional and must be checked against human-reviewed examples.",
+        "Embedding similarity may be affected by short text, slang, transliteration, dialect, and code-mixing.",
+        "A record can be relevant to more than one domain; this prototype evaluates one target domain per run.",
+        "The score does not establish representativeness of a real-world population without a reference distribution.",
+        "This prototype recomputes embeddings separately from frozen V2.1; later integration can reuse embeddings."
+    ]
+}

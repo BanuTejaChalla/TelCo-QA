@@ -1,0 +1,79 @@
+{
+    "metric": "Metric 05 - Target-Domain Relevance",
+    "version": "PROTOTYPE-V2",
+    "generated_at_utc": "2026-11-23T18:40:16.696413+00:00",
+    "target_domain": "Sports",
+    "target_domain_description": "Telugu-English code-mixed text about sports, including sports news, cricket, football, match results, players, teams, tournaments, scores, sports opinions, and fan experiences.",
+    "similarity_model": "intfloat/multilingual-e5-base",
+    "similarity_method": "Maximum cosine similarity across multiple target-domain references, contrasted against general-conversation reference similarity.",
+    "classification": {
+        "target_similarity_threshold": 0.6,
+        "minimum_relevance_margin": 0.05,
+        "threshold_status": "Provisional; requires human validation."
+    },
+    "dataset": {
+        "total_records": 7223,
+        "evaluated_records": 7223,
+        "empty_text_records": 0
+    },
+    "domain_relevance": {
+        "relevant_records": 3,
+        "not_relevant_records": 7220,
+        "target_domain_coverage_score": 0.04
+    },
+    "score_distribution": {
+        "target_similarity": {
+            "min": 0.6797187328338623,
+            "mean": 0.7888403534889221,
+            "median": 0.7883142828941345,
+            "p25": 0.7763235569000244,
+            "p75": 0.8008308410644531,
+            "max": 0.865149974822998
+        },
+        "general_similarity": {
+            "min": 0.6931488513946533,
+            "mean": 0.7970003485679626,
+            "median": 0.7974513173103333,
+            "p25": 0.7849794030189514,
+            "p75": 0.8101198673248291,
+            "max": 0.8589044809341431
+        },
+        "relevance_margin": {
+            "min": -0.08007282018661499,
+            "mean": -0.008159972727298737,
+            "median": -0.00789409875869751,
+            "p25": -0.019343674182891846,
+            "p75": 0.0028355419635772705,
+            "max": 0.0566827654838562
+        }
+    },
+    "threshold_sensitivity": {
+        "0.5": {
+            "relevant_records": 3,
+            "coverage_percent": 0.04
+        },
+        "0.6": {
+            "relevant_records": 3,
+            "coverage_percent": 0.04
+        },
+        "0.7": {
+            "relevant_records": 3,
+            "coverage_percent": 0.04
+        },
+        "0.8": {
+            "relevant_records": 2,
+            "coverage_percent": 0.03
+        }
+    },
+    "target_reference_count": 4,
+    "general_reference_count": 5,
+    "interpretation": "The score estimates the proportion of records whose target-domain similarity meets the selected threshold and exceeds general-conversation similarity by the required margin. It is a semantic relevance proxy, not proof of population representativeness.",
+    "limitations": [
+        "Thresholds and relevance margins are provisional.",
+        "Reference descriptions influence the result.",
+        "Embedding similarity can be affected by short text, slang, transliteration, dialect, and code-mixing.",
+        "The general-conversation references are a contrast baseline, not a definitive negative class.",
+        "Human review is required to validate classifications.",
+        "This metric does not prove population representativeness or complete coverage of domain subtopics."
+    ]
+}

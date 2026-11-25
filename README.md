@@ -78,3 +78,16 @@ Metric 05 is a zero-shot prototype. Its outputs are suitable for exploratory dom
 - **Data integrity:** Existing annotations are preserved. Disagreements are treated as review candidates and are not automatically corrected.
 - **Scoring approach:** Annotation availability and Yama prediction coverage are reported separately. Agreement is calculated among non-blank predictions. Datasets without applicable annotations receive a score of 0 for this metric and are excluded from the overall quality score aggregation.
 
+
+## Progress Update - 25 November 2026
+
+### Metric 4 - Annotation Reliability
+- Implemented Yama-based annotation verification using the LatentAILabs/yama-indic model.
+- Detected annotation availability across the sentiment and topic columns.
+- Updated the evaluation to calculate reliability using only non-abstained Yama predictions.
+- Abstentions are excluded from the reliability score denominator.
+- Tested the metric on 50 records per annotation column (100 annotation cells).
+- Sample results: 88.0% prediction coverage, 80.68% agreement among predictions, 12 abstentions, and 0 unparsed responses.
+- Preserved the original dataset annotations; mismatches remain candidates for manual review.
+- Sample runs are excluded from the overall dataset quality score.
+
